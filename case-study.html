@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study – Hyphene AI in Healthcare Operations</title>
+  <meta name="description"
+    content="Discover how Hyphene transformed healthcare operations for a leading hospital network, reducing manual work by 45% and cutting costs by 30%.">
+  <meta name="keywords"
+    content="Hyphene case study, healthcare AI, operational efficiency, AI automation, hospital workflow, prior authorization, nurse scheduling, claims processing, AI-powered automation, medical AI, health tech case study" />
+  <link rel="canonical" href="https://hyphene.ai/case-study" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Case Study – Hyphene AI in Healthcare Operations" />
+  <meta property="og:description"
+    content="Discover how Hyphene transformed healthcare operations for a leading hospital network, reducing manual work by 45% and cutting costs by 30%." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hyphene.ai/case-study" />
+  <meta property="og:image" content="https://hyphene.ai/case-study-hero.png" />
+  <meta property="og:site_name" content="Hyphene" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study – Hyphene AI in Healthcare Operations" />
+  <meta name="twitter:description"
+    content="Discover how Hyphene transformed healthcare operations for a leading hospital network, reducing manual work by 45% and cutting costs by 30%." />
+  <meta name="twitter:image" content="https://hyphene.ai/case-study-hero.png" />
+  <meta name="twitter:site" content="@hyphene" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <!-- Structured Data for CaseStudy -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": "Hyphene AI Optimizes Hospital Workflow",
+    "url": "https://hyphene.ai/case-study",
+    "about": "AI‑powered automation for healthcare operations",
+    "description": "A leading hospital network reduced manual prior‑auth workload by 45% and cut operational costs by 30% after implementing Hyphene.",
+    "identifier": "CS-2026-01",
+    "author": {
+      "@type": "Organization",
+      "name": "Hyphene",
+      "url": "https://hyphene.ai"
+    },
+    "datePublished": "2026-05-15",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hyphene",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hyphene.ai/logo.png"
+      }
+    },
+    "image": "https://hyphene.ai/case-study-hero.png",
+    "mainEntity": {
+      "@type": "MedicalOrganization",
+      "name": "Apex Health System",
+      "description": "A multi‑state hospital network serving 2M patients."
+    },
+    "result": {
+      "@type": "QuantitativeValue",
+      "value": "45% reduction in manual workload, 30% cost savings",
+      "unitText": "percentage"
+    }
+  }
+  </script>
+  <style>
+    /* ═══════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════ */
+    :root {
+      --premium-gradient: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+      --logo-text-color: #2F365F;
+      --blue-500: #3B82F6;
+      --blue-400: #60A5FA;
+      --blue-100: #DBEAFE;
+      --blue-50: #EFF6FF;
+
+      --slate-950: #020617;
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-400: #94A3B8;
+      --slate-300: #CBD5E1;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --slate-50: #F8FAFC;
+      --white: #FFFFFF;
+
+      --green-500: #22C55E;
+      --green-100: #DCFCE7;
+      --amber-500: #F59E0B;
+      --amber-100: #FEF3C7;
+      --red-500: #EF4444;
+      --red-100: #FEE2E2;
+
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.10), 0 4px 16px rgba(15, 23, 42, 0.06);
+      --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.20);
+
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--slate-50);
+      color: var(--slate-900);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT UTILITIES
+    ═══════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       TYPOGRAPHY
+    ═══════════════════════════════════════════ */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      background: var(--premium-gradient);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--white);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    .display-xl {
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--logo-text-color);
+    }
+
+    .display-lg {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--logo-text-color);
+      margin-bottom: 32px;
+      margin-top: 48px;
+    }
+
+    .body-lg {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--slate-600);
+    }
+
+    .body-md {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--slate-600);
+      margin-bottom: 24px;
+    }
+
+    /* ═══════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 600;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--premium-gradient);
+      color: var(--white);
+      box-shadow: var(--shadow-blue);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 40px rgba(47, 54, 95, 0.30);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-200);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+      transform: translateY(-1px);
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO SECTION
+    ═══════════════════════════════════════════ */
+    #hero {
+      background: linear-gradient(-45deg, #EFF6FF, #E0F2FE, #F3E8FF, #FAF5FF);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      position: relative;
+      padding: 120px 0 70px 0;
+      border-bottom: 1px solid var(--slate-150);
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    /* ═══════════════════════════════════════════
+       METRICS & RESULTS
+    ═══════════════════════════════════════════ */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .metric-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--blue-100);
+    }
+
+    .metric-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .metric-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--logo-text-color);
+      margin-bottom: 8px;
+    }
+
+    .metric-delta {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+
+    .metric-delta-up {
+      background: var(--green-100);
+      color: #166534;
+    }
+
+    /* ═══════════════════════════════════════════
+       TRUST / IMPACT BAND
+    ═══════════════════════════════════════════ */
+    .trust-band {
+      background: var(--premium-gradient);
+      padding: 50px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-band::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 9999px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+
+    .trust-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--white);
+      opacity: 0.8;
+    }
+
+    .trust-heading {
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 48px;
+    }
+
+    .trust-stats {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .trust-stat {
+      flex: 1;
+      padding: 0 32px;
+      position: relative;
+    }
+
+    .trust-stat+.trust-stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      bottom: 10%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .trust-stat-value {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .trust-stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 640px) {
+      .trust-stats {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .trust-stat+.trust-stat::before {
+        display: none;
+      }
+
+      .trust-stat {
+        padding: 0 8px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       TESTIMONIALS
+    ═══════════════════════════════════════════ */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+    }
+
+    .testimonial-card-center {
+      border-color: var(--blue-200);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testimonial-quote {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--slate-700);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--premium-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .testimonial-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--slate-950);
+    }
+
+    .testimonial-role {
+      font-size: 13px;
+      color: var(--slate-500);
+    }
+
+    .testimonial-org {
+      font-size: 13px;
+      font-weight: 600;
+      color: #312E81;
+    }
+
+    @media (max-width: 992px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       CHALLENGE & SOLUTION LAYOUT (SCREENSHOT DESIGN)
+    ═══════════════════════════════════════════ */
+    .challenge-solution-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .challenge-solution-left {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .cs-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .cs-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-500);
+      background: var(--blue-50);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .cs-icon svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .challenge-solution-left h2.cs-title {
+      font-family: var(--font-sans);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--logo-text-color);
+      margin: 0;
+      text-transform: none;
+    }
+
+    .challenge-solution-left p.cs-desc {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--slate-600);
+      margin-bottom: 20px;
+    }
+
+    .challenge-solution-left p.cs-desc:last-child {
+      margin-bottom: 0;
+    }
+
+    .challenge-solution-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .cs-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+
+    .cs-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--blue-100);
+    }
+
+    .cs-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .cs-card-body {
+      padding: 24px;
+    }
+
+    .cs-card-title {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--logo-text-color);
+      margin-bottom: 8px;
+    }
+
+    .cs-card-text {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--slate-600);
+      line-height: 1.6;
+    }
+
+    /* Timeline styling in cs-card */
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .timeline-marker {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--blue-50);
+      color: var(--blue-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+      border: 1px solid var(--blue-100);
+    }
+
+    .timeline-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .timeline-title {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--logo-text-color);
+    }
+
+    .timeline-desc {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--slate-500);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+      .challenge-solution-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .metrics-row {
+        grid-template-columns: 1fr;
+      }
+
+      .display-xl {
+        font-size: 32px;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('navbar.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+        // Execute any scripts inside navbar.html
+        document.querySelectorAll('#navbar-container script').forEach(old => {
+          const neu = document.createElement('script');
+          if (old.src) { neu.src = old.src; neu.async = old.async; }
+          else { neu.textContent = old.textContent; }
+          document.body.appendChild(neu);
+        });
+      })
+      .catch(e => console.error('Navbar load error:', e));
+  </script>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <!-- <div class="eyebrow"><span class="eyebrow-dot"></span>Case Study</div> -->
+          <h1 class="display-xl">How Hyphene Accelerated Healthcare Operations</h1>
+          <p class="body-lg">A leading hospital network partnered with Hyphene to automate prior‑authorization,
+            nurse‑scheduling and claims processing, delivering measurable ROI.</p>
+          <div class="hero-ctas">
+            <a href="#details" class="btn btn-primary">Read the Story</a>
+            <a href="https://calendly.com/hyphene/demo" class="btn btn-outline" target="_blank">Book a Demo</a>
+          </div>
+        </div>
+        <!-- <div class="hero-right">
+          <img src="case-study-hero.png" alt="Hospital dashboard" class="hero-image" />
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Details -->
+  <section id="details" class="section" style="padding: 50px 0;">
+    <div class="container">
+      <div class="challenge-solution-grid">
+
+        <!-- Left Column: Challenge & Solution -->
+        <div class="challenge-solution-left">
+
+          <!-- The Challenge -->
+          <div>
+            <div class="cs-header">
+              <div class="cs-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                </svg>
+              </div>
+              <h2 class="cs-title">The Challenge</h2>
+            </div>
+            <p class="cs-desc">Apex Health System faced a critical operational bottleneck: prior-authorization
+              workflows. Highly specialized clinical teams were spending an average of <strong>30+ hours weekly</strong>
+              on manual entry—manually extracting data from charts, filling payer forms, and submitting requests.</p>
+            <p class="cs-desc">This administrative burden led to significant clinician burnout, delayed patient
+              treatment cycles, and a higher-than-average margin for transcription errors, which risked compliance
+              integrity, billing accuracy, and increased claim denials.</p>
+          </div>
+
+          <!-- The Solution -->
+          <div>
+            <div class="cs-header">
+              <div class="cs-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                </svg>
+              </div>
+              <h2 class="cs-title">The Solution</h2>
+            </div>
+            <p class="cs-desc">Hyphene deployed a custom prior-authorization layer tailored for the Apex Health
+              hospital network. Utilizing our proprietary AI Orchestration layer integrated with their existing Epic
+              EHR, the system automatically extracts clinical details from patient records to pre-fill payer forms.</p>
+            <p class="cs-desc">Integration with existing EHR systems was completely seamless, requiring zero manual data
+              porting and providing real-time operational validation that checks for payer rule compliance as the
+              prior-auth requests are compiled.</p>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Pain Point Reality Card & Timeline Card -->
+        <div class="challenge-solution-right">
+
+          <!-- Card 1: The Pain Point Reality -->
+          <div class="cs-card">
+            <img src="solution.png" alt="Doctor at dashboard desk" class="cs-card-img" />
+            <div class="cs-card-body">
+              <h3 class="cs-card-title">The Pain Point Reality</h3>
+              <p class="cs-card-text">Pre-Implementation: 30+ hours per week dedicated to manual prior-auth forms.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Implementation Timeline -->
+          <div class="cs-card" style="padding: 24px;">
+            <h3 class="cs-card-title" style="margin-bottom: 16px;">Implementation Timeline</h3>
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-marker">m1</div>
+                <div class="timeline-content">
+                  <h4 class="timeline-title">Data Integration</h4>
+                  <p class="timeline-desc">Secure EHR bridging &amp; API handshake.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker">m2</div>
+                <div class="timeline-content">
+                  <h4 class="timeline-title">Model Calibration</h4>
+                  <p class="timeline-desc">Specialized training on workflow &amp; payer rules.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker">m3</div>
+                <div class="timeline-content">
+                  <h4 class="timeline-title">Pilot Deployment</h4>
+                  <p class="timeline-desc">Live testing across cardiology wing.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker">m4</div>
+                <div class="timeline-content">
+                  <h4 class="timeline-title">Full Scale Rollout</h4>
+                  <p class="timeline-desc">100% adoption across hospital network.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Measurable Impact Band -->
+  <div class="trust-band">
+    <div class="trust-badge">
+      <span class="trust-badge-dot"></span>
+      The Impact
+    </div>
+    <p class="trust-heading">Measurable results for Apex Health System</p>
+    <div class="trust-stats">
+      <div class="trust-stat">
+        <div class="trust-stat-value">2 Days</div>
+        <div class="trust-stat-label">Prior-Auth Turnaround</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-value">1,200 Hrs</div>
+        <div class="trust-stat-label">Staff Time Saved Annually</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-value">$850k</div>
+        <div class="trust-stat-label">Operating Costs Reduced Yearly</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-value">45%</div>
+        <div class="trust-stat-label">Reduction in Claim Denials</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue Case Study Details -->
+  <section id="details-continued" class="section">
+    <div class="container">
+
+      <div>
+        <h2 class="display-lg" style="text-align: center;">Voice of the Customer</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-quote">“Hyphene didn’t just give us another tool; they gave our nurses their time
+              back. The AI handles the bureaucracy so we can focus on what matters: the patients.”</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SJ</div>
+              <div class="testimonial-info">
+                <div class="testimonial-name">Sarah Jenkins</div>
+                <!-- <div class="testimonial-role">Director of Clinical Ops</div> -->
+                <!-- <div class="testimonial-org">Apex Health System</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card testimonial-card-center">
+            <p class="testimonial-quote">“The ROI was immediate. We saw a 45% reduction in denials within the first 90
+              days. It's the smartest investment we've made in years.”</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">DM</div>
+              <div class="testimonial-info">
+                <div class="testimonial-name">David Miller</div>
+                <!-- <div class="testimonial-role">Chief Financial Officer</div> -->
+                <!-- <div class="testimonial-org">Apex Health System</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+        document.querySelectorAll('#footer-container script').forEach(old => {
+          const neu = document.createElement('script');
+          if (old.src) { neu.src = old.src; neu.async = old.async; }
+          else { neu.textContent = old.textContent; }
+          document.body.appendChild(neu);
+        });
+      })
+      .catch(e => console.error('Footer load error:', e));
+  </script>
+</body>
+
+</html>

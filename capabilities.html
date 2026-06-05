@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform Capabilities - Hyphene | Enterprise Healthcare AI Features</title>
+  <meta name="description"
+    content="Explore Hyphene's comprehensive platform capabilities: AI intelligence, workflow automation, HIPAA compliance, EHR integrations, real-time monitoring, and mobile-first UX for healthcare operations." />
+  <meta name="keywords"
+    content="healthcare AI capabilities, HIPAA compliant AI, EHR integration, healthcare workflow automation, medical AI platform features" />
+  <meta name="author" content="Hyphene" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://hyphene.ai/capabilities" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Platform Capabilities - Hyphene | Enterprise Healthcare AI Features" />
+  <meta property="og:description"
+    content="Explore Hyphene's comprehensive platform capabilities: AI intelligence, workflow automation, HIPAA compliance, EHR integrations, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hyphene.ai/capabilities" />
+  <meta property="og:image" content="https://hyphene.ai/capabilities-hero.png" />
+  <meta property="og:site_name" content="Hyphene" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Platform Capabilities - Hyphene | Enterprise Healthcare AI Features" />
+  <meta name="twitter:description"
+    content="Explore Hyphene's comprehensive platform capabilities: AI intelligence, workflow automation, HIPAA compliance, EHR integrations, and more." />
+  <meta name="twitter:image" content="https://hyphene.ai/capabilities-hero.png" />
+  <meta name="twitter:site" content="@hyphene" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Platform Capabilities",
+  "description": "Complete overview of Hyphene's AI-powered healthcare platform capabilities including AI intelligence, workflow automation, HIPAA compliance, and EHR integrations",
+  "url": "https://hyphene.ai/capabilities",
+  "provider": {
+    "@type": "Organization",
+    "name": "Hyphene",
+    "url": "https://hyphene.ai/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SoftwareFeature",
+        "name": "AI Intelligence",
+        "description": "Proprietary models trained on healthcare-specific data with continuous learning loops"
+      },
+      {
+        "@type": "SoftwareFeature",
+        "name": "Workflow Automation",
+        "description": "Rule-based and AI-driven automation for repetitive healthcare tasks"
+      },
+      {
+        "@type": "SoftwareFeature",
+        "name": "HIPAA Compliance",
+        "description": "SOC 2 Type II certified with end-to-end encryption and full audit trail"
+      },
+      {
+        "@type": "SoftwareFeature",
+        "name": "EHR Integrations",
+        "description": "Seamless connectors for Epic, Cerner, Meditech, and 40+ payer systems"
+      }
+    ]
+  }
+}
+</script>
+
+  <style>
+    /* ═══════════════════════════════════════════
+     DESIGN TOKENS
+  ═══════════════════════════════════════════ */
+    :root {
+      --premium-gradient: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+      --logo-text-color: #2F365F;
+      --blue-500: #3B82F6;
+      --blue-400: #60A5FA;
+      --blue-100: #DBEAFE;
+      --blue-50: #EFF6FF;
+
+      --slate-950: #020617;
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-400: #94A3B8;
+      --slate-300: #CBD5E1;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --slate-50: #F8FAFC;
+      --white: #FFFFFF;
+
+      --green-500: #22C55E;
+      --green-100: #DCFCE7;
+      --amber-500: #F59E0B;
+      --amber-100: #FEF3C7;
+      --red-500: #EF4444;
+      --red-100: #FEE2E2;
+
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.10), 0 4px 16px rgba(15, 23, 42, 0.06);
+      --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.20);
+
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* Spacing & Extra Gray tokens */
+      --space-3: 12px;
+      --space-5: 20px;
+      --space-8: 32px;
+      --gray-100: #F1F5F9;
+      --gray-500: #64748B;
+    }
+
+    /* ═══════════════════════════════════════════
+     RESET & BASE
+  ═══════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--slate-50);
+      color: var(--slate-900);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* ═══════════════════════════════════════════
+     LAYOUT UTILITIES
+  ═══════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    .section-sm {
+      padding: 64px 0;
+    }
+
+    /* ═══════════════════════════════════════════
+     TYPOGRAPHY
+  ═══════════════════════════════════════════ */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      background: var(--premium-gradient);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--white);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    .display-xl {
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--logo-text-color);
+    }
+
+    .display-lg {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--logo-text-color);
+    }
+
+    .display-md {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--logo-text-color);
+    }
+
+    .highlight {
+      background: #3EA6E8;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+    }
+
+    .body-lg {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--slate-600);
+    }
+
+    .body-md {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--slate-600);
+    }
+
+    .label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+    }
+
+    /* ═══════════════════════════════════════════
+     BUTTONS
+  ═══════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 600;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+      color: var(--white);
+      box-shadow: var(--shadow-blue), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #3B3F7E 0%, #2F365F 25%, #312E81 50%, #1E1B4B 75%, #3B3F7E 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 40px rgba(47, 54, 95, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+      transform: translateY(-1px);
+    }
+
+    .btn-lg {
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: var(--radius-md);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+
+    /* ═══════════════════════════════════════════
+     HERO SECTION
+  ═══════════════════════════════════════════ */
+    #hero {
+      padding: 120px 0 80px;
+      background: var(--blue-50);
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+    }
+
+    .hero-bg-glow {
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--blue-500);
+      background: var(--blue-100);
+      border: 1px solid var(--blue-200);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    .highlight-italic {
+      color: var(--blue-500);
+      font-style: italic;
+    }
+
+    /* ═══════════════════════════════════════════
+     CAPABILITIES
+  ═══════════════════════════════════════════ */
+    #capabilities {
+      background: var(--white);
+      padding: 50px 0px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .cap-card {
+      padding: 32px 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--slate-200);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: all var(--transition);
+      background: var(--white);
+    }
+
+    .cap-card:hover {
+      border-color: rgba(47, 54, 95, 0.3);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .cap-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .cap-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--logo-text-color);
+    }
+
+    .cap-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--slate-500);
+    }
+
+    /* ═══════════════════════════════════════════
+     CTA SECTION
+  ═══════════════════════════════════════════ */
+    .cta-section {
+      background: var(--premium-gradient);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--slate-900);
+      padding: 16px 32px;
+      border-radius: var(--radius-md);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+    /* ═══════════════════════════════════════════
+     CAPABILITY DETAILS SECTION (PREDICTIVE, NLP, INTEGRATIONS)
+  ═══════════════════════════════════════════ */
+    .bg-white {
+      background: var(--white);
+    }
+
+    .bg-light-premium {
+      background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+      border-top: 1px solid var(--slate-200);
+      border-bottom: 1px solid var(--slate-200);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    .capability-detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .capability-detail-grid.reverse {
+      grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    /* On desktop, reverse grid order so visual is on the left and text on right */
+    @media (min-width: 769px) {
+      .capability-detail-grid.reverse>.capability-content {
+        order: 2;
+      }
+
+      .capability-detail-grid.reverse>div:last-child {
+        order: 1;
+      }
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue-500);
+      background: var(--blue-50);
+      border: 1px solid var(--blue-100);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .section-label svg {
+      color: var(--blue-500);
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--logo-text-color);
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: var(--premium-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-description {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--slate-600);
+      margin-bottom: 28px;
+    }
+
+    .capability-feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .capability-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--slate-700);
+      line-height: 1.5;
+    }
+
+    .check-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--green-500);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .capability-visual-panel {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .capability-visual-panel:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+      border-color: var(--blue-100);
+    }
+
+    .cap-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--slate-100);
+      margin-bottom: 24px;
+    }
+
+    .cap-panel-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--logo-text-color);
+    }
+
+    .cap-panel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--slate-600);
+      background: var(--slate-100);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Risk Dashboard styling */
+    .risk-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .risk-bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .risk-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+
+    .risk-bar-track {
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .risk-bar-fill {
+      height: 100%;
+      border-radius: var(--radius-full);
+    }
+
+    .risk-bar-fill.high {
+      background: var(--red-500);
+    }
+
+    .risk-bar-fill.medium {
+      background: var(--amber-500);
+    }
+
+    .risk-bar-fill.low {
+      background: var(--green-500);
+    }
+
+    .alert-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .alert-item.warning {
+      background: var(--red-100);
+      color: #991b1b;
+      border: 1px solid #fee2e2;
+    }
+
+    .alert-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* NLP Extracting panel */
+    .nlp-input {
+      background: var(--slate-950);
+      color: var(--slate-100);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 20px;
+      line-height: 1.6;
+      border: 1px solid var(--slate-900);
+    }
+
+    .highlight-text {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border-bottom: 1.5px solid var(--red-500);
+      padding: 0px 4px;
+      border-radius: 2px;
+    }
+
+    .highlight-value {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+      border-bottom: 1.5px solid var(--green-500);
+      padding: 0px 4px;
+      border-radius: 2px;
+    }
+
+    .nlp-output {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+
+    .nlp-entity {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      margin-right: 6px;
+      margin-bottom: 8px;
+    }
+
+    .nlp-entity.entity-condition {
+      background: var(--red-100);
+      color: #991b1b;
+      border: 1px solid var(--red-200);
+    }
+
+    .nlp-entity.entity-medication {
+      background: var(--green-100);
+      color: #166534;
+      border: 1px solid var(--green-200);
+    }
+
+    .nlp-entity.entity-lab {
+      background: var(--blue-100);
+      color: #1e40af;
+      border: 1px solid var(--blue-200);
+    }
+
+    /* Integrations & Performance */
+    .integration-logos {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .integration-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate-700);
+      transition: all var(--transition);
+    }
+
+    .integration-badge:hover {
+      border-color: var(--blue-300);
+      background: var(--blue-50);
+      color: var(--blue-600);
+      transform: translateY(-2px);
+    }
+
+    .integration-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .perf-meter {
+      background: var(--slate-950);
+      border: 1px solid var(--slate-900);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+      color: var(--white);
+      transition: all var(--transition);
+    }
+
+    .perf-meter:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(2, 6, 17, 0.4);
+    }
+
+    .perf-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .perf-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .perf-row:first-of-type {
+      padding-top: 0;
+    }
+
+    .perf-label {
+      font-size: 13px;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .perf-value {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .perf-value.green {
+      color: #4ade80;
+    }
+
+    .perf-value.blue {
+      color: #60a5fa;
+    }
+
+    .perf-value.amber {
+      color: #fbbf24;
+    }
+
+    /* Dividers */
+    .divider {
+      height: 1px;
+      margin: 80px 0;
+    }
+
+    .divider-gradient {
+      background: linear-gradient(90deg, transparent, var(--slate-200) 20%, var(--slate-200) 80%, transparent);
+    }
+
+    /* ═══════════════════════════════════════════
+     MOBILE RESPONSIVE
+  ═══════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .cap-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        text-align: center;
+      }
+
+      .hero-ctas {
+        justify-content: center;
+      }
+
+      .cap-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      #hero {
+        padding: 80px 0 60px;
+      }
+
+      .capability-detail-grid,
+      .capability-detail-grid.reverse {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero" aria-label="Platform Capabilities Hero">
+    <div class="hero-bg-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <!-- <div class="hero-eyebrow">
+          PLATFORM CAPABILITIES
+        </div> -->
+        <h1 class="display-xl">
+          AI that understands healthcare at a <span class="highlight">fundamental level</span>
+        </h1>
+        <p class="body-lg">
+          Our models are trained on over 14 billion healthcare data points, fine-tuned for operational workflows, and
+          continuously improved by customer feedback.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CAPABILITIES
+  ═══════════════════════════════════════════ -->
+
+
+  <!-- ═══════════════════════════════════════════
+       DETAILED CAPABILITIES
+  ═══════════════════════════════════════════ -->
+  <section class="section bg-light-premium" aria-label="Detailed platform features">
+    <div class="container">
+
+      <!-- 1. Predictive Analytics -->
+      <div class="capability-detail-grid">
+        <div class="capability-content reveal">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+            Predictive Analytics
+          </div>
+          <h2 class="section-title">Predict <span class="gradient-text">Before It Happens</span></h2>
+          <p class="section-description">Our ML models process real-time patient data streams to identify deterioration
+            risks up to 6 hours before clinical signs manifest — giving care teams critical response time.</p>
+          <div class="capability-feature-list">
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>Sepsis Early Warning</strong> — Detect sepsis onset 4-6 hours early with 94%
+                sensitivity</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>Readmission Prediction</strong> — 30-day readmission risk scoring at discharge</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>AKI Detection</strong> — Acute kidney injury prediction from serum creatinine trends</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>Fall Risk Scoring</strong> — Dynamic fall risk models updated every 4 hours per
+                patient</span>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn btn-primary" style="margin-top:var(--space-8)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+            See It In Action
+          </a>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="capability-visual-panel">
+            <div class="cap-panel-header">
+              <span class="cap-panel-title">Patient Risk Dashboard</span>
+              <span class="cap-panel-badge">
+                <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block"></span>
+                Live
+              </span>
+            </div>
+            <div class="risk-bars">
+              <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                  <span>Sepsis Risk — Patient #4821</span>
+                  <span style="color:#ef4444">87%</span>
+                </div>
+                <div class="risk-bar-track">
+                  <div class="risk-bar-fill high" style="width:87%"></div>
+                </div>
+              </div>
+              <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                  <span>Readmission Risk — Patient #3305</span>
+                  <span style="color:#f59e0b">62%</span>
+                </div>
+                <div class="risk-bar-track">
+                  <div class="risk-bar-fill medium" style="width:62%"></div>
+                </div>
+              </div>
+              <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                  <span>AKI Risk — Patient #7214</span>
+                  <span style="color:#f59e0b">55%</span>
+                </div>
+                <div class="risk-bar-track">
+                  <div class="risk-bar-fill medium" style="width:55%"></div>
+                </div>
+              </div>
+              <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                  <span>Fall Risk — Patient #2109</span>
+                  <span style="color:#22c55e">18%</span>
+                </div>
+                <div class="risk-bar-track">
+                  <div class="risk-bar-fill low" style="width:18%"></div>
+                </div>
+              </div>
+              <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                  <span>Deterioration — Patient #5593</span>
+                  <span style="color:#22c55e">12%</span>
+                </div>
+                <div class="risk-bar-track">
+                  <div class="risk-bar-fill low" style="width:12%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="alert-item warning" style="margin-top:var(--space-5)">
+              <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+              </svg>
+              Alert sent to Dr. Chen — Patient #4821 flagged
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider divider-gradient"></div>
+
+      <!-- 2. Clinical NLP -->
+      <div class="capability-detail-grid reverse">
+        <div class="capability-content reveal">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            Clinical NLP &amp; Documentation
+          </div>
+          <h2 class="section-title">Turn Notes into <span class="gradient-text">Structured Insight</span></h2>
+          <p class="section-description">Our clinical NLP engine extracts entities, conditions, medications, and intent
+            from unstructured notes — and generates complete, accurate clinical documentation automatically.</p>
+          <div class="capability-feature-list">
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>Ambient Dictation</strong> — Real-time transcription of physician-patient conversations into
+                structured notes</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>ICD-10 Auto-Coding</strong> — Automated diagnosis code assignment with 97% accuracy</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>Clinical Entity Extraction</strong> — Identify conditions, medications, procedures, and
+                vitals from free text</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span><strong>Prior Auth Generation</strong> — Automatically draft prior authorization requests from
+                clinical notes</span>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="capability-visual-panel">
+            <div class="cap-panel-header">
+              <span class="cap-panel-title">NLP Entity Extraction</span>
+              <span class="cap-panel-badge">97% Accuracy</span>
+            </div>
+            <div class="nlp-input">
+              <span style="color:#60a5fa">Patient note:</span><br />
+              "63F w/ <span class="highlight-text">Type 2 Diabetes</span> &amp; <span
+                class="highlight-text">HTN</span>,<br />
+              on <span class="highlight-value">Metformin 1000mg</span> BID and<br />
+              <span class="highlight-value">Lisinopril 10mg</span> QD. HbA1c<br />
+              <span class="highlight-text">8.2%</span>. Refer to endo."
+            </div>
+            <div class="nlp-output">
+              <div
+                style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray-500);margin-bottom:var(--space-3)">
+                Extracted Entities</div>
+              <span class="nlp-entity entity-condition">Condition: T2DM</span>
+              <span class="nlp-entity entity-condition">Condition: Hypertension</span>
+              <span class="nlp-entity entity-medication">Med: Metformin 1000mg</span>
+              <span class="nlp-entity entity-medication">Med: Lisinopril 10mg</span>
+              <span class="nlp-entity entity-lab">Lab: HbA1c 8.2%</span>
+              <div
+                style="margin-top:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--gray-100);font-size:12px;color:var(--gray-500)">
+                ICD-10: <strong>E11.9</strong>, <strong>I10</strong> &nbsp;·&nbsp; CPT: <strong>99213</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider divider-gradient"></div>
+
+      <!-- 3. Integrations -->
+      <div class="capability-detail-grid">
+        <div class="capability-content reveal">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="18" cy="18" r="3" />
+              <circle cx="6" cy="6" r="3" />
+              <path d="M13 6h3a2 2 0 012 2v7" />
+              <line x1="6" y1="9" x2="6" y2="21" />
+            </svg>
+            EHR Integrations
+          </div>
+          <h2 class="section-title">Connect to <span class="gradient-text">Any EHR System</span></h2>
+          <p class="section-description">Pre-built, certified integrations with all major EHR systems via HL7 FHIR R4,
+            ensuring seamless bidirectional data flow without custom engineering work.</p>
+          <div class="capability-feature-list">
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span>HL7 FHIR R4 certified bidirectional APIs</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span>Native Epic, Cerner, MEDITECH, Allscripts connectors</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span>Average integration time under 48 hours</span>
+            </div>
+            <div class="capability-feature-item">
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg>
+              <span>DICOM imaging, lab systems, and IoT device integrations</span>
+            </div>
+          </div>
+          <div class="integration-logos">
+            <div class="integration-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+              Epic
+            </div>
+            <div class="integration-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+              </svg>
+              Cerner
+            </div>
+            <div class="integration-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              MEDITECH
+            </div>
+            <div class="integration-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Allscripts
+            </div>
+            <div class="integration-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 3 21 3 21 8" />
+                <line x1="4" y1="20" x2="21" y2="3" />
+              </svg>
+              HL7 FHIR
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="perf-meter">
+            <div
+              style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#94a3b8;margin-bottom:var(--space-5)">
+              Platform Performance</div>
+            <div class="perf-row">
+              <span class="perf-label">Average API Response Time</span>
+              <span class="perf-value green">120ms</span>
+            </div>
+            <div class="perf-row">
+              <span class="perf-label">Platform Uptime (30d)</span>
+              <span class="perf-value green">99.97%</span>
+            </div>
+            <div class="perf-row">
+              <span class="perf-label">FHIR Calls / Day</span>
+              <span class="perf-value blue">48.2M</span>
+            </div>
+            <div class="perf-row">
+              <span class="perf-label">AI Inferences / Second</span>
+              <span class="perf-value blue">12,400</span>
+            </div>
+            <div class="perf-row">
+              <span class="perf-label">Data Points Processed Daily</span>
+              <span class="perf-value amber">2.1B</span>
+            </div>
+            <div class="perf-row">
+              <span class="perf-label">Active Integrations</span>
+              <span class="perf-value amber">847</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="capabilities" class="section" aria-label="Platform capabilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><span class="eyebrow-dot"></span>Platform Capabilities</span>
+        <h2 class="display-lg">Built for <span class="highlight">Enterprise Healthcare</span></h2>
+        <p class="body-md">Every component engineered with clinical accuracy, HIPAA compliance, and scalable AI at its
+          core.</p>
+      </div>
+
+      <div class="cap-grid">
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#DBEAFE,#EFF6FF)">🧠</div>
+          <h3 class="cap-title">AI Intelligence</h3>
+          <p class="cap-desc">Proprietary models trained on healthcare-specific data. Continuous learning loops adapt to
+            your organization's patterns in real time.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#DCFCE7,#F0FDF4)">⚙️</div>
+          <h3 class="cap-title">Workflow Automation</h3>
+          <p class="cap-desc">Rule-based and AI-driven automation handles repetitive tasks — from scheduling to claims
+            routing — without human intervention.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#FEF3C7,#FFFBEB)">📊</div>
+          <h3 class="cap-title">Data & Analytics</h3>
+          <p class="cap-desc">Unified data warehouse surfaces cross-product insights. Custom dashboards, scheduled
+            reports, and API access for BI tools.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#FCE7F3,#FDF2F8)">🔔</div>
+          <h3 class="cap-title">Real-Time Monitoring</h3>
+          <p class="cap-desc">24/7 operational monitoring with intelligent alert routing. Anomalies are detected and
+            escalated before they become incidents.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#DBEAFE,#EFF6FF)">🔒</div>
+          <h3 class="cap-title">HIPAA Compliance</h3>
+          <p class="cap-desc">SOC 2 Type II certified. End-to-end encryption, role-based access, and full audit trail
+            out of the box for every module.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#DCFCE7,#F0FDF4)">🔌</div>
+          <h3 class="cap-title">EHR Integrations</h3>
+          <p class="cap-desc">Seamless connectors for Epic, Cerner, Meditech, and 40+ payer systems. HL7 FHIR native —
+            no complex middleware required.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#FEF3C7,#FFFBEB)">📱</div>
+          <h3 class="cap-title">Mobile-First UX</h3>
+          <p class="cap-desc">Staff apps for iOS and Android. Managers receive push alerts, approve schedules, and
+            review claims — from anywhere.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon" style="background:linear-gradient(135deg,#FCE7F3,#FDF2F8)">📈</div>
+          <h3 class="cap-title">ROI Reporting</h3>
+          <p class="cap-desc">Pre-built ROI dashboards quantify cost savings, efficiency gains, and quality
+            improvements. Ready for your board meetings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="cta-section" aria-label="Call to Action">
+    <div class="container">
+      <h2>Transform Your Healthcare Operations Today</h2>
+      <p>Join 200+ healthcare organizations already using AI to improve efficiency, reduce costs, and deliver better
+        patient care.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary" onclick="window.location.href='contact.html'">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Book a Demo
+        </button>
+        <button class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <polygon points="10,8 16,12 10,16" />
+          </svg>
+          See How It Works
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 72;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://hyphene.ai/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/hero_bg.png</image:loc>
+      <image:title>AI-Powered Healthcare Operations Dashboard</image:title>
+      <image:caption>Intelligent healthcare automation platform interface showing workflow management</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Solutions Page -->
+  <url>
+    <loc>https://hyphene.ai/solutions</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/solutions-hero.png</image:loc>
+      <image:title>Healthcare AI Solutions Overview</image:title>
+      <image:caption>Complete overview of Hyphene's AI healthcare solutions platform</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ClaimPilot Landing Page -->
+  <url>
+    <loc>https://hyphene.ai/claimpilot</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/claimpilot-hero.png</image:loc>
+      <image:title>ClaimPilot Healthcare Revenue Management</image:title>
+      <image:caption>AI-powered claim denial prevention and revenue cycle management system</image:caption>
+    </image:image>
+  </url>
+
+  <!-- NurseOps Landing Page -->
+  <url>
+    <loc>https://hyphene.ai/nurseops</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/nurseops-hero.png</image:loc>
+      <image:title>NurseOps AI Staffing Intelligence</image:title>
+      <image:caption>AI-powered nurse staffing optimization and workforce management platform</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Capabilities Page -->
+  <url>
+    <loc>https://hyphene.ai/capabilities</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/capabilities-hero.png</image:loc>
+      <image:title>Platform Capabilities - Enterprise Healthcare AI</image:title>
+      <image:caption>Complete overview of Hyphene's AI platform capabilities including HIPAA compliance, EHR integrations, and workflow automation</image:caption>
+    </image:image>
+  </url>
+
+  <!-- How It Works Page -->
+  <url>
+    <loc>https://hyphene.ai/how-it-works</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/how-it-works-hero.png</image:loc>
+      <image:title>How It Works - AI Healthcare Implementation</image:title>
+      <image:caption>Step-by-step process for implementing Hyphene's AI healthcare platform from data integration to automation</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://hyphene.ai/about</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/about-hero.png</image:loc>
+      <image:title>About Hyphene Healthcare AI Team</image:title>
+      <image:caption>Hyphene team and healthcare AI technology leadership</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://hyphene.ai/contact</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/contact-hero.png</image:loc>
+      <image:title>Contact Hyphene Healthcare Solutions</image:title>
+      <image:caption>Contact page for AI healthcare operations consultation</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Terms and Conditions -->
+  <url>
+    <loc>https://hyphene.ai/terms</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://hyphene.ai/privacy</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

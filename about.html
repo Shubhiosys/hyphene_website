@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Hyphene — AI-Powered Healthcare Operations | Our Story & Mission</title>
+  <meta name="description"
+    content="Learn about Hyphene's mission to transform healthcare operations with AI. Meet our team of healthcare technology experts and discover our commitment to improving patient outcomes through intelligent automation." />
+  <meta name="keywords"
+    content="about Hyphene, healthcare AI company, medical technology team, healthcare operations leadership, AI healthcare mission, hospital management solutions" />
+  <meta name="author" content="Hyphene" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://hyphene.ai/about" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="About Us - Hyphene — AI-Powered Healthcare Operations" />
+  <meta property="og:description"
+    content="Learn about Hyphene's mission to transform healthcare operations with AI and our team of healthcare technology experts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hyphene.ai/about" />
+  <meta property="og:image" content="https://hyphene.ai/about-hero.png" />
+  <meta property="og:site_name" content="Hyphene" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us - Hyphene — AI-Powered Healthcare Operations" />
+  <meta name="twitter:description"
+    content="Learn about Hyphene's mission to transform healthcare operations with AI and our team of healthcare technology experts." />
+  <meta name="twitter:image" content="https://hyphene.ai/about-hero.png" />
+  <meta name="twitter:site" content="@hyphene" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════
+     DESIGN TOKENS
+  ═══════════════════════════════════════════ */
+    :root {
+      --premium-gradient: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+      --logo-text-color: #2F365F;
+      --blue-600: #2563EB;
+      --blue-500: #3B82F6;
+      --blue-400: #60A5FA;
+      --blue-100: #DBEAFE;
+      --blue-50: #EFF6FF;
+
+      --slate-950: #020617;
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-400: #94A3B8;
+      --slate-300: #CBD5E1;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --slate-50: #F8FAFC;
+      --white: #FFFFFF;
+
+      --green-500: #22C55E;
+      --green-100: #DCFCE7;
+      --amber-500: #F59E0B;
+      --amber-100: #FEF3C7;
+      --red-500: #EF4444;
+      --red-100: #FEE2E2;
+
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.10), 0 4px 16px rgba(15, 23, 42, 0.06);
+      --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.20);
+
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ═══════════════════════════════════════════
+     RESET & BASE
+  ═══════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--slate-50);
+      color: var(--slate-900);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* ═══════════════════════════════════════════
+     LAYOUT UTILITIES
+  ═══════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section-sm {
+      padding: 80px 0;
+    }
+
+    /* ═══════════════════════════════════════════
+     TYPOGRAPHY
+  ═══════════════════════════════════════════ */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--premium-gradient);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--white);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    .display-xl {
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--logo-text-color);
+    }
+
+    .display-lg {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--logo-text-color);
+    }
+
+    .display-md {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--logo-text-color);
+    }
+
+    .highlight {
+      background: #3EA6E8;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+    }
+
+    .body-lg {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--slate-600);
+    }
+
+    .body-md {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--slate-600);
+    }
+
+    .label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+    }
+
+    /* ═══════════════════════════════════════════
+     BUTTONS
+  ═══════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 600;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--premium-gradient);
+      color: var(--white);
+      box-shadow: var(--shadow-blue), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #3B3F7E 0%, #2F365F 25%, #1E1B4B 50%, #312E81 75%, #3B3F7E 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 40px rgba(47, 54, 95, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+      transform: translateY(-1px);
+    }
+
+    .btn-lg {
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: var(--radius-md);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+
+    /* Navbar styles are provided by navbar.html */
+
+    /* ═══════════════════════════════════════════
+     HERO SECTION
+  ═══════════════════════════════════════════ */
+    #hero {
+      padding: 120px 0 80px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+    }
+
+    .hero-bg-grid {
+      display: none;
+    }
+
+    .hero-bg-glow {
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      min-height: 400px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ═══════════════════════════════════════════
+     COMPANY SECTION
+  ═══════════════════════════════════════════ */
+    #company {
+      background: var(--slate-50);
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .company-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .company-image {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+    }
+
+    .company-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .company-stat {
+      background: var(--white);
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--slate-200);
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .company-stat:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--blue-100);
+    }
+
+    .company-stat-number {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--blue-600);
+      margin-bottom: 8px;
+    }
+
+    .company-stat-label {
+      font-size: 14px;
+      color: var(--slate-600);
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+     MISSION & VISION SECTION
+  ═══════════════════════════════════════════ */
+    #mission-vision {
+      background: var(--slate-50);
+      padding: 50px 0;
+    }
+
+    .mv-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    /* Mission Card */
+    .mv-card-mission {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mv-card-mission::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(62, 166, 232, 0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .mv-card-mission:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue-100);
+    }
+
+    .mv-card-mission .mv-badge {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+      border: 1px solid var(--blue-100);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    .mv-card-mission .mv-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3EA6E8;
+    }
+
+    .mv-card-mission .mv-title {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--slate-900);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .mv-card-mission .mv-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--slate-600);
+    }
+
+    .mv-card-mission .mv-divider {
+      height: 1px;
+      background: var(--slate-200);
+      margin: 4px 0;
+    }
+
+    .mv-card-mission .mv-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-50);
+      border: 1px solid var(--blue-100);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue-600);
+      width: fit-content;
+    }
+
+    /* Vision Card */
+    .mv-card-vision {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mv-card-vision::before {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(62, 166, 232, 0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .mv-card-vision:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue-100);
+    }
+
+    .mv-card-vision .mv-badge {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+      border: 1px solid var(--blue-100);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    .mv-card-vision .mv-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3EA6E8;
+    }
+
+    .mv-card-vision .mv-title {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--slate-900);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .mv-card-vision .mv-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--slate-600);
+    }
+
+    .mv-card-vision .mv-divider {
+      height: 1px;
+      background: var(--slate-200);
+      margin: 4px 0;
+    }
+
+    .mv-card-vision .mv-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-50);
+      border: 1px solid var(--blue-100);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue-600);
+      width: fit-content;
+    }
+
+    @media (max-width: 768px) {
+      .mv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mv-card-mission,
+      .mv-card-vision {
+        padding: 36px 28px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+     STORY SECTION
+  ═══════════════════════════════════════════ */
+    #story {
+      background: var(--slate-50);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .story-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .story-image {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+    }
+
+    .story-image-placeholder {
+      width: 100%;
+      height: 320px;
+      background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      color: var(--blue-600);
+    }
+
+    /* ═══════════════════════════════════════════
+     VALUES SECTION
+  ═══════════════════════════════════════════ */
+    #values {
+      background: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .value-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      text-align: center;
+      transition: all var(--transition-slow);
+    }
+
+    .value-card:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: var(--blue-100);
+    }
+
+    .value-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--blue-100), var(--blue-50));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 24px;
+    }
+
+    .value-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--slate-900);
+      margin-bottom: 12px;
+    }
+
+    .value-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--slate-600);
+    }
+
+    /* ═══════════════════════════════════════════
+     TEAM SECTION
+  ═══════════════════════════════════════════ */
+    #team {
+      background: var(--slate-50);
+      padding: 80px 0;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      text-align: center;
+      transition: transform var(--transition);
+    }
+
+    .team-member:hover {
+      transform: translateY(-6px);
+    }
+
+    .member-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--slate-700);
+      background: linear-gradient(135deg, #d0e8f5 0%, #b8d9ee 100%);
+      border: 4px solid var(--white);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .member-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .member-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2F365F;
+      margin-bottom: 10px;
+    }
+
+    .member-role {
+      font-size: 15px;
+      color: var(--slate-500);
+      font-weight: 400;
+    }
+
+    .member-bio {
+      display: none;
+    }
+
+    /* ═══════════════════════════════════════════
+     STATS SECTION
+  ═══════════════════════════════════════════ */
+    #stats {
+      background: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+      color: var(--white);
+    }
+
+    #stats .section-header .eyebrow {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: rgba(59, 130, 246, 0.3);
+      color: var(--white);
+    }
+
+    #stats .section-header .display-lg {
+      color: var(--white);
+    }
+
+    #stats .section-header .body-md {
+      color: var(--white);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+     CTA SECTION
+  ═══════════════════════════════════════════ */
+    #cta {
+      background: var(--premium-gradient);
+      padding: 50px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: none;
+      background-size: 48px 48px;
+    }
+
+    #cta::after {
+      content: '';
+      position: absolute;
+      top: -300px;
+      left: -300px;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(47, 54, 95, 0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    #cta .display-lg {
+      color: var(--white);
+    }
+
+    #cta .body-lg {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cta-cta {
+      background: var(--white);
+      color: var(--blue-600);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-cta:hover {
+      background: var(--slate-50);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Footer styles are provided by footer.html */
+
+    /* ═══════════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+
+      .hero-inner,
+      .story-grid,
+      .company-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .values-grid,
+      .team-grid,
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .hero-left {
+        text-align: center;
+      }
+
+      .hero-ctas {
+        justify-content: center;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      #hero {
+        padding: 100px 0 60px;
+      }
+
+      .company-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-statement {
+        font-size: 20px;
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        const container = document.getElementById('navbar-container');
+        container.innerHTML = data;
+        // Execute scripts from navbar.html
+        container.querySelectorAll('script').forEach(oldScript => {
+          const newScript = document.createElement('script');
+          if (oldScript.src) {
+            newScript.src = oldScript.src;
+            newScript.async = oldScript.async;
+          } else {
+            newScript.textContent = oldScript.textContent;
+          }
+          document.body.appendChild(newScript);
+        });
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <!-- <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          About Hyphene
+        </div> -->
+          <h1 class="display-xl">
+            Smarter Healthcare Operations<span class="highlight"> Powered by AI</span>
+          </h1>
+          <p class="body-lg">
+            Empower healthcare teams with intelligent automation that streamlines operations, reduces manual work, and
+            improves patient experiences. </p>
+          <div class="hero-ctas">
+            <!-- <a href="#cta" class="btn btn-primary btn-lg">Book a Demo</a> -->
+            <a href="contact.html" class="btn btn-outline btn-lg"
+              style="background: #3EA6E8; color: white; border-color: #3EA6E8; transition: all 0.22s;"
+              onmouseover="this.style.background='#2D8FD7'; this.style.borderColor='#2D8FD7'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(62, 166, 232, 0.3)';"
+              onmouseout="this.style.background='#3EA6E8'; this.style.borderColor='#3EA6E8'; this.style.transform='translateY(0px)'; this.style.boxShadow='none';">Connect
+              Now</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="hero_about.png" alt="Healthcare AI visualization"
+            style="width: 90%; height: auto; max-height: 400px; object-fit: cover; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Mission & Vision Section -->
+  <section id="mission-vision">
+    <div class="container">
+      <div class="mv-header">
+        <h2 class="display-lg">Our <span class="highlight">Mission</span> &amp; Vision</h2>
+        <p class="body-md">The principles that guide every line of code we write and every partnership we build.</p>
+      </div>
+
+      <div class="mv-grid">
+
+        <!-- Mission Card -->
+        <div class="mv-card-mission">
+          <!-- <div class="mv-badge">🎯</div> -->
+          <div class="mv-label">Our Mission</div>
+          <h3 class="mv-title">Giving Clinicians Back Their Time</h3>
+          <div class="mv-divider"></div>
+          <p class="mv-body">
+            Our mission is to eliminate the administrative burden that keeps healthcare professionals from doing what
+            they do best. We build intelligent AI systems that handle scheduling, claims processing, and operational
+            complexity—so clinicians can spend more time with patients and less time on paperwork.
+          </p>
+          <div class="mv-pill">🏥 Patient-First Automation</div>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="mv-card-vision">
+          <!-- <div class="mv-badge">🌟</div> -->
+          <div class="mv-label">Our Vision</div>
+          <h3 class="mv-title">A World Where Healthcare Runs Itself</h3>
+          <div class="mv-divider"></div>
+          <p class="mv-body">
+            We envision a healthcare system where every administrative task is handled seamlessly by AI—where no nurse
+            is lost in a scheduling spreadsheet, no claim is rejected due to human error, and every provider
+            organization runs at peak efficiency around the clock, 365 days a year.
+          </p>
+          <div class="mv-pill">🚀 Zero-Friction Healthcare Ops</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" style="padding-top: 50px;padding-bottom: 50px;">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <!-- <div class="eyebrow">The Proof Is In The Results</div> -->
+        <h2 class="display-lg">Numbers That Actually Matter</h2>
+        <p class="body-md">
+          We don't track vanity metrics. We track the outcomes that change lives and save healthcare organizations.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">67%</div>
+          <div class="stat-label">Reduction in Admin Overhead</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">99.8%</div>
+          <div class="stat-label">Claims Processing Accuracy</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Staffing Crises This Month</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">42%</div>
+          <div class="stat-label">More Time With Patients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+
+
+  <!-- Values Section -->
+  <section id="values" style="padding-top: 50px;padding-bottom: 50px;">
+    <div class="container">
+      <div class="section-header">
+        <!-- <div class="eyebrow">Our Unshakable Principles</div> -->
+        <h2 class="display-lg">This Isn't Just Business—<span class="highlight">It's Personal</span></h2>
+        <p class="body-md">
+          We're not another tech company that stumbled into healthcare. We're healthcare people who got tired of
+          watching good systems fail.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3 class="value-title">Purpose-Built Solutions</h3>
+          <p class="value-desc">
+            We hate meaningless features as much as you do. Every line of code we write solves a real problem that keeps
+            healthcare leaders up at night.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🏥</div>
+          <h3 class="value-title">Clinicians First, Always</h3>
+          <p class="value-desc">
+            Our founders have spent decades in hospitals and clinics. We're not guessing what healthcare needs—we've
+            lived the chaos you're trying to fix.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🤖</div>
+          <h3 class="value-title">AI That Actually Works</h3>
+          <p class="value-desc">
+            No hype, no buzzwords. Just battle-tested AI that processes millions of claims and manages thousands of
+            staffing schedules with 99.8% accuracy.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🔒</div>
+          <h3 class="value-title">Bank-Level Security</h3>
+          <p class="value-desc">
+            Healthcare data is sacred. We protect it with military-grade encryption, HIPAA compliance, and security
+            audits that would make Fort Knox jealous.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">📊</div>
+          <h3 class="value-title">Results, Not Reports</h3>
+          <p class="value-desc">
+            We don't sell dashboards. We sell outcomes. 67% reduction in admin overhead. 92% automation rate. 24/7
+            staffing coverage. Period.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🚀</div>
+          <h3 class="value-title">Move Fast, Don't Break Things</h3>
+          <p class="value-desc">
+            Healthcare moves fast. So do we. Weekly deployments, instant support, and solutions that evolve as quickly
+            as your challenges do.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" style="padding:50px 0px">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="display-lg">Meet Our Expert Team</h2>
+        <p class="body-md">Professionals behind your success</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-avatar">SR</div>
+          <h3 class="member-name">Som Ranjan</h3>
+          <div class="member-role">CEO &amp; Director</div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar">PB</div>
+          <h3 class="member-name">Pramod Bodhale</h3>
+          <div class="member-role">CTO &amp; Director</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta">
+    <div class="cta-inner">
+      <!-- <div class="eyebrow">Stop Fighting Administrative Fires</div> -->
+      <h2 class="display-lg">Start Saving Healthcare Instead</h2>
+      <p class="body-lg">
+        Your clinicians didn't choose healthcare to fill out forms. Let's get them back to doing what they do
+        best—caring for patients.
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-lg cta-cta">Fix Your Operations Now</a>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        const container = document.getElementById('footer-container');
+        container.innerHTML = data;
+        // Execute any scripts from footer.html
+        container.querySelectorAll('script').forEach(oldScript => {
+          const newScript = document.createElement('script');
+          if (oldScript.src) {
+            newScript.src = oldScript.src;
+            newScript.async = oldScript.async;
+          } else {
+            newScript.textContent = oldScript.textContent;
+          }
+          document.body.appendChild(newScript);
+        });
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,807 @@
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Hyphene Home">
+          <img src="logo1.png" alt="Hyphene Logo" style="width: 220px; height: 35px;">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-dropdown">
+         <a href="solutions.html"> <button class="nav-link dropdown-toggle" id="solutionsDropdown" aria-expanded="false" aria-haspopup="true">
+            Solutions
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-left: 4px; transition: transform 0.2s">
+              <path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="solutionsDropdown">
+            <li role="menuitem"><a href="nurseops-landing.html" class="dropdown-link">NurseOps</a></li>
+            <li role="menuitem"><a href="claimpilot-landing.html" class="dropdown-link">ClaimPilot</a></li>
+          </ul>
+        </li>
+        <li><a href="capabilities.html" class="nav-link">Capabilities</a></li>
+        <!-- <li><a href="how-it-works.html" class="nav-link">How it Works</a></li> -->
+        <li><a href="case-study.html" class="nav-link">Case Study</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" class="btn btn-primary btn-sm js-book-demo">Book a Demo</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu" type="button">×</button>
+  <div class="mobile-dropdown">
+   <a href="solutions.html"></a> <button class="mobile-nav-link mobile-dropdown-toggle" id="mobileSolutionsDropdown">
+      Solutions
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-left: 4px; transition: transform 0.2s">
+        <path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    </a>
+    <div class="mobile-dropdown-menu">
+      <a href="nurseops-landing.html" class="mobile-nav-link mobile-sub-link">NurseOps</a>
+      <a href="claimpilot-landing.html" class="mobile-nav-link mobile-sub-link">ClaimPilot</a>
+    </div>
+  </div>
+  <a href="capabilities.html" class="mobile-nav-link">Capabilities</a>
+  <!-- <a href="how-it-works.html" class="mobile-nav-link">How it Works</a> -->
+  <a href="case-study.html" class="mobile-nav-link">Case Study</a>
+  <a href="about.html" class="mobile-nav-link">About Us</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div class="mobile-divider"></div>
+  <div class="mobile-actions">
+    <!-- <a href="#" class="btn btn-outline" style="justify-content:center">Log in</a> -->
+    <a href="#" class="btn btn-primary js-book-demo" style="justify-content:center">Book a Demo</a>
+  </div>
+</div>
+
+<div id="booking-modal" role="dialog" aria-label="Book a meeting" aria-hidden="true" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.55);z-index:4000;align-items:center;justify-content:center;padding:16px;">
+  <div style="background:white;width:90%;max-width:900px;height:90%;max-height:720px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(15,23,42,0.25)">
+    <button id="booking-close" aria-label="Close booking" type="button" style="position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:10px;border:1px solid rgba(148,163,184,0.35);background:rgba(62,166,232,0.10);color:var(--slate-900);font-size:22px;line-height:1;cursor:pointer;z-index:2;">×</button>
+    <div id="my-cal-inline-30-min-meeting" style="height:100%;width:100%;border:none;"></div>
+  </div>
+</div>
+
+<style>
+/* Navbar Styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--slate-200);
+  transition: all 0.3s ease;
+}
+
+#navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--slate-900);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-logo-mark {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #2F345F, #1E293B);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  color: var(--slate-600);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--slate-900);
+}
+
+/* Desktop Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.dropdown-toggle:hover { 
+  color: var(--slate-900); 
+  background: var(--slate-100); 
+}
+.dropdown-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(15,23,42,0.10);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s;
+  z-index: 1000;
+  padding: 8px 0;
+  margin-top: 4px;
+}
+.dropdown-menu[aria-hidden="false"],
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover dropdown functionality */
+.nav-dropdown:hover .dropdown-toggle svg {
+  transform: rotate(180deg);
+}
+.dropdown-link {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate-700);
+  transition: all 0.2s;
+}
+.dropdown-link:hover {
+  background: var(--slate-400);
+  color:#2F365F;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 8px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.22s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-primary {
+  background: #3EA6E8;
+  color: white;
+  border: 1px solid #3EA6E8;
+}
+.btn-primary:hover {
+  background: #2D8FD7;
+  border-color: #2D8FD7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(62, 166, 232, 0.3);
+}
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 15px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  z-index: 2002;
+  position: relative;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-toggle.is-open {
+  background-color: rgba(62, 166, 232, 0.10);
+}
+
+.nav-toggle.is-open span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.nav-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-toggle:focus {
+  outline: 2px solid #3EA6E8;
+  outline-offset: 2px;
+}
+
+/* Responsive Logo and Mobile Menu */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-actions {
+    margin-left: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-logo img {
+    width: 180px !important;
+    height: 30px !important;
+  }
+  .nav-toggle {
+    display: flex !important;
+    position: fixed;
+    top: 10px;
+    right: 12px;
+    z-index: 3002;
+  }
+  .mobile-menu {
+    top: 64px;
+    height: calc(100vh - 64px);
+    padding: 24px 24px 24px;
+  }
+}
+
+/* Booking modal (Cal.com) */
+#booking-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#booking-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  #booking-modal > div {
+    width: 95% !important;
+    height: 95% !important;
+    margin: 10px auto !important;
+  }
+  #my-cal-inline-30-min-meeting {
+    min-height: 500px;
+  }
+}
+
+#my-cal-inline-30-min-meeting {
+  border: none;
+  min-height: 600px;
+}
+
+@media (max-width: 480px) {
+  .nav-logo img {
+    width: 150px !important;
+    height: 25px !important;
+  }
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 3px;
+  background: var(--slate-700);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  transform-origin: center;
+  display: block;
+}
+
+.nav-toggle.is-open span {
+  background: var(--slate-900);
+}
+
+/* Mobile Menu */
+.mobile-menu-close {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(62, 166, 232, 0.10);
+    border: 1px solid var(--slate-200);
+    color: var(--slate-900);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3003;
+  }
+}
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 2000;
+}
+
+.mobile-menu-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 400px;
+  height: 100vh;
+  background: var(--white);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 24px 24px;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  right: 0;
+  animation: slideInVertical 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInVertical {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.mobile-nav-link {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--slate-100);
+  color: var(--slate-700);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.mobile-nav-link:hover {
+  color: var(--slate-900);
+}
+
+.mobile-divider {
+  height: 1px;
+  background: var(--slate-200);
+  margin: 24px 0;
+}
+
+.mobile-actions {
+  margin-top: auto;
+}
+
+/* Mobile Dropdown */
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--slate-100);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.mobile-dropdown-toggle:hover {
+  color: var(--slate-900);
+}
+.mobile-dropdown-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+.mobile-dropdown-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 16px;
+  border-left: 2px solid var(--slate-200);
+  margin-left: 16px;
+}
+.mobile-dropdown-menu.show {
+  display: flex;
+}
+.mobile-sub-link {
+  padding: 12px 0;
+  font-size: 15px;
+  color: var(--slate-600);
+  border-bottom: 1px solid var(--slate-100);
+}
+.mobile-sub-link:hover {
+  color: var(--slate-900);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-actions {
+    display: none;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .nav-inner {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: 12px 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+</style>
+
+<script>
+// ── Navbar scroll state
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 16);
+}, { passive: true });
+
+// ── Mobile menu toggle - Fixed for clickability
+let navToggle, mobileMenu, mobileMenuBackdrop, menuOpen = false;
+let mobileMenuClose;
+
+// Initialize mobile menu functionality
+function initMobileMenu() {
+  navToggle = document.getElementById('navToggle');
+  mobileMenu = document.getElementById('mobileMenu');
+  mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+  mobileMenuClose = document.getElementById('mobileMenuClose');
+  
+  if (!navToggle || !mobileMenu || !mobileMenuBackdrop || !mobileMenuClose) {
+    console.error('Mobile menu elements not found');
+    return;
+  }
+  
+  // Reset menu state
+  mobileMenu.classList.remove('open');
+  mobileMenuBackdrop.classList.remove('open');
+  navToggle.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  menuOpen = false;
+  
+  // Remove existing listeners to prevent duplicates
+  navToggle.removeEventListener('click', toggleMobileMenu);
+  mobileMenuBackdrop.removeEventListener('click', closeMobileMenu);
+  mobileMenuClose.removeEventListener('click', closeMobileMenu);
+
+  // Add click listener
+  navToggle.addEventListener('click', toggleMobileMenu);
+  mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+  mobileMenuClose.addEventListener('click', closeMobileMenu);
+  
+}
+
+function closeMobileMenu() {
+  if (!navToggle || !mobileMenu || !mobileMenuBackdrop) return;
+  menuOpen = false;
+  mobileMenu.classList.remove('open');
+  mobileMenuBackdrop.classList.remove('open');
+  navToggle.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+function toggleMobileMenu(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  
+  menuOpen = !menuOpen;
+  
+  // Toggle menu open state
+  mobileMenu.classList.toggle('open', menuOpen);
+  mobileMenuBackdrop.classList.toggle('open', menuOpen);
+  navToggle.setAttribute('aria-expanded', menuOpen);
+  navToggle.classList.toggle('is-open', menuOpen);
+  
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
+}
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', initMobileMenu);
+
+// Also initialize immediately in case DOM is already loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMobileMenu);
+} else {
+  initMobileMenu();
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!menuOpen || !mobileMenu || !navToggle || !mobileMenuBackdrop) return;
+  if (!mobileMenu.contains(e.target) && !navToggle.contains(e.target)) {
+    closeMobileMenu();
+  }
+});
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && menuOpen) {
+    closeMobileMenu();
+  }
+});
+
+// Close mobile menu on nav link click
+function initMobileMenuLinks() {
+  if (!mobileMenu) return;
+  
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+}
+
+// Initialize links when menu is ready
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(initMobileMenuLinks, 100);
+});
+
+// ── Desktop dropdown functionality
+const solutionsDropdown = document.getElementById('solutionsDropdown');
+const dropdownMenu = solutionsDropdown?.nextElementSibling;
+
+if (solutionsDropdown && dropdownMenu) {
+  solutionsDropdown.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isExpanded = solutionsDropdown.getAttribute('aria-expanded') === 'true';
+    solutionsDropdown.setAttribute('aria-expanded', !isExpanded);
+    dropdownMenu.setAttribute('aria-hidden', isExpanded);
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!solutionsDropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      solutionsDropdown.setAttribute('aria-expanded', 'false');
+      dropdownMenu.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Close dropdown on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      solutionsDropdown.setAttribute('aria-expanded', 'false');
+      dropdownMenu.setAttribute('aria-hidden', 'true');
+    }
+  });
+}
+
+// ── Mobile dropdown functionality
+const mobileSolutionsDropdown = document.getElementById('mobileSolutionsDropdown');
+const mobileDropdownMenu = mobileSolutionsDropdown?.nextElementSibling;
+
+if (mobileSolutionsDropdown && mobileDropdownMenu) {
+  mobileSolutionsDropdown.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isExpanded = mobileSolutionsDropdown.getAttribute('aria-expanded') === 'true';
+    mobileSolutionsDropdown.setAttribute('aria-expanded', !isExpanded);
+    mobileDropdownMenu.classList.toggle('show', !isExpanded);
+  });
+}
+
+// ── Cal.com booking modal (inline embed)
+let calInitialized = false;
+let bookingModal;
+let closeBtn;
+
+function initBookingModal() {
+  bookingModal = document.getElementById('booking-modal');
+  closeBtn = document.getElementById('booking-close');
+  if (!bookingModal || !closeBtn) return;
+
+  if (document.body.dataset.bookingDelegationBound !== 'true') {
+    document.body.dataset.bookingDelegationBound = 'true';
+    document.addEventListener('click', function (e) {
+      const trigger = e.target.closest('.js-book-demo');
+      if (!trigger) return;
+      openBookingModal(e);
+    }, true);
+  }
+
+  closeBtn.addEventListener('click', closeBookingModal);
+
+  bookingModal.addEventListener('click', function (e) {
+    if (e.target === bookingModal) {
+      closeBookingModal();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeBookingModal();
+    }
+  });
+}
+
+function openBookingModal(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  if (!bookingModal) {
+    bookingModal = document.getElementById('booking-modal');
+  }
+  if (!bookingModal) return;
+  bookingModal.style.display = 'flex';
+  bookingModal.classList.add('open');
+  bookingModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+
+  if (!calInitialized) {
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement('script')).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === 'string') {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ['initNamespace', namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+    Cal('init', '30-min-meeting', { origin: 'https://app.cal.com' });
+    Cal.ns['30-min-meeting']('inline', {
+      elementOrSelector: '#my-cal-inline-30-min-meeting',
+      config: { layout: 'month_view' },
+      calLink: 'shreyash.iosys/30-min-meeting'
+    });
+    Cal.ns['30-min-meeting']('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+
+    calInitialized = true;
+  }
+}
+
+function closeBookingModal() {
+  if (!bookingModal) {
+    bookingModal = document.getElementById('booking-modal');
+  }
+  if (!bookingModal) return;
+  bookingModal.classList.remove('open');
+  bookingModal.setAttribute('aria-hidden', 'true');
+  bookingModal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+initBookingModal();
+</script>

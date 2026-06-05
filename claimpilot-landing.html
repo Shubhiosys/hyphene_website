@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClaimPilot – AI-Powered Healthcare Revenue Intelligence | Reduce Claim Denials | HYPHENE</title>
+<meta name="description" content="ClaimPilot reduces claim denials by 40% and accelerates reimbursements with AI-powered healthcare revenue management. Automate billing workflows and maximize revenue cycle efficiency." />
+<meta name="keywords" content="healthcare revenue management, claim denial prevention, medical billing AI, healthcare reimbursement automation, revenue cycle management, claim processing software" />
+<meta name="author" content="Hyphene" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://hyphene.ai/claimpilot" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="ClaimPilot – AI-Powered Healthcare Revenue Intelligence" />
+<meta property="og:description" content="Reduce claim denials by 40% and accelerate reimbursements with AI-powered healthcare revenue management." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hyphene.ai/claimpilot" />
+<meta property="og:image" content="https://hyphene.ai/claimpilot-hero.png" />
+<meta property="og:site_name" content="Hyphene" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ClaimPilot – AI-Powered Healthcare Revenue Intelligence" />
+<meta name="twitter:description" content="Reduce claim denials by 40% and accelerate reimbursements with AI-powered healthcare revenue management." />
+<meta name="twitter:image" content="https://hyphene.ai/claimpilot-hero.png" />
+<meta name="twitter:site" content="@hyphene" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "ClaimPilot",
+  "description": "AI-powered healthcare revenue management system that reduces claim denials and accelerates reimbursements",
+  "provider": {
+    "@type": "Organization",
+    "name": "Hyphene",
+    "url": "https://hyphene.ai/"
+  },
+  "serviceType": "Healthcare Revenue Management",
+  "areaServed": "United States",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "ClaimPilot Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Claim Denial Prevention",
+        "description": "AI-powered system to reduce claim denials by 40%"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Revenue Cycle Automation",
+        "description": "Automated billing workflows and reimbursement acceleration"
+      }
+    ]
+  },
+  "mainEntity": {
+    "@type": "SoftwareApplication",
+    "name": "ClaimPilot",
+    "applicationCategory": "Healthcare Software",
+    "operatingSystem": "Web Browser"
+  }
+}
+</script>
+
+<style>
+/* ============================
+   CSS VARIABLES & RESET
+   ============================ */
+:root {
+  --white: #FFFFFF;
+  --off-white: #F8FAFC;
+  --surface: #F1F5F9;
+  --surface2: #E8F0FE;
+  --border: rgba(148,163,184,0.25);
+  --border-strong: rgba(100,116,139,0.2);
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --blue: #3B82F6;
+  --blue-dark: #1D4ED8;
+  --blue-light: #EFF6FF;
+  --teal: #0D9488;
+  --teal-light: #F0FDFA;
+  --indigo: #4F46E5;
+  --green: #10B981;
+  --amber: #F59E0B;
+  --red: #EF4444;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.05);
+  --shadow-xl: 0 40px 80px rgba(0,0,0,0.1), 0 16px 40px rgba(0,0,0,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Variables expected by navbar.html & footer.html */
+  --slate-900: #0F172A;
+  --slate-800: #1E293B;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-400: #94A3B8;
+  --slate-300: #CBD5E1;
+  --slate-200: #E2E8F0;
+  --slate-100: #F1F5F9;
+  --slate-50:  #F8FAFC;
+  --radius-full: 9999px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--off-white);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================
+   NOISE TEXTURE OVERLAY
+   ============================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* Navbar styles are provided by navbar.html */
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-ghost {
+  padding: 9px 18px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-strong);
+}
+.btn-ghost:hover {
+  background: var(--white);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  color: white;
+  box-shadow: 0 4px 14px rgba(59,130,246,0.4);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59,130,246,0.5);
+}
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  border-radius: var(--radius-lg);
+}
+.btn-outline-blue {
+  padding: 13px 26px;
+  background: transparent;
+  color: var(--blue);
+  border: 1.5px solid rgba(59,130,246,0.4);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+}
+.btn-outline-blue:hover {
+  background: var(--blue-light);
+  border-color: var(--blue);
+  transform: translateY(-1px);
+}
+
+/* ============================
+   SECTION BASE
+   ============================ */
+section {
+  position: relative;
+  z-index: 1;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================
+   HERO SECTION
+   ============================ */
+#hero {
+  min-height: 100vh;
+  padding-top: 68px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(59,130,246,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(13,148,136,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 80% at 50% 0%, rgba(239,246,255,0.8) 0%, transparent 50%),
+    var(--off-white);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 5rem 0 4rem;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 8px;
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+.hero-badge-dot {
+  width: 6px; height: 6px;
+  background: var(--blue);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.6; transform:scale(1.3); }
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 1.4rem;
+}
+.hero-headline .gradient-text {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+}
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.hero-trust-avatars {
+  display: flex;
+}
+.hero-trust-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+}
+.hero-trust-avatar:first-child { margin-left: 0; }
+
+/* DASHBOARD UI */
+.hero-dashboard {
+  position: relative;
+  perspective: 1000px;
+}
+.dashboard-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl), inset 0 1px 0 rgba(255,255,255,0.8);
+  padding: 1.5rem;
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+  transition: transform 0.6s ease;
+  animation: float-card 6s ease-in-out infinite;
+}
+@keyframes float-card {
+  0%,100% { transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(0); }
+  50% { transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-8px); }
+}
+.dashboard-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.dashboard-title { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); }
+.live-badge {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.72rem; font-weight: 600; color: var(--green);
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); animation: pulse-dot 1.5s infinite; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 1.2rem; }
+.kpi-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  transition: all 0.25s;
+}
+.kpi-label { font-size: 0.68rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.kpi-value { font-size: 1.25rem; font-weight: 800; font-family: var(--font-display); color: var(--text-primary); line-height: 1; }
+.kpi-change { font-size: 0.68rem; font-weight: 600; color: var(--green); margin-top: 3px; }
+.kpi-change.neg { color: var(--red); }
+.chart-area {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-bottom: 1rem;
+}
+.chart-label { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+.mini-chart { width: 100%; height: 70px; }
+.claim-alerts { display: flex; flex-direction: column; gap: 6px; }
+.claim-row {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 0.76rem;
+}
+.claim-id { font-weight: 600; color: var(--text-primary); }
+.claim-amount { font-weight: 700; color: var(--text-secondary); }
+.status-pill {
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.status-approved { background: rgba(16,185,129,0.12); color: var(--green); }
+.status-review { background: rgba(245,158,11,0.12); color: var(--amber); }
+.status-denied { background: rgba(239,68,68,0.1); color: var(--red); }
+/* Floating mini cards */
+.float-kpi {
+  position: absolute;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  z-index: 10;
+}
+.float-kpi-1 { top: -20px; right: -30px; animation: float-a 4s ease-in-out infinite; }
+.float-kpi-2 { bottom: 30px; left: -40px; animation: float-b 5s ease-in-out infinite; }
+@keyframes float-a { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes float-b { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+.float-kpi-icon { font-size: 1rem; }
+.float-kpi-label { font-size: 0.65rem; color: var(--text-muted); font-weight: 500; }
+.float-kpi-val { font-size: 1rem; font-weight: 800; font-family: var(--font-display); }
+
+/* ============================
+   TRUST STRIP
+   ============================ */
+#trust {
+  padding: 50px 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.trust-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: default;
+  position: relative;
+  transition: color 0.2s;
+}
+.trust-item:hover { color: var(--blue); }
+.trust-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+}
+.trust-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--text-primary);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+.trust-tooltip::after {
+  content:'';
+  position:absolute;
+  top:100%; left:50%;
+  transform:translateX(-50%);
+  border:5px solid transparent;
+  border-top-color:var(--text-primary);
+}
+.trust-item:hover .trust-tooltip { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ============================
+   SECTION HEADERS
+   ============================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1px solid rgba(59,130,246,0.15);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+.section-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============================
+   PROBLEM SECTION
+   ============================ */
+#problems {
+  padding: 50px 0;
+  background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%);
+}
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+}
+.problem-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  cursor: default;
+}
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59,130,246,0.2);
+}
+.problem-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.problem-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.problem-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ============================
+   SOLUTION SECTION
+   ============================ */
+#solution {
+  padding: 50px 0;
+  background: var(--off-white);
+}
+.solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.solution-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+}
+.solution-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.solution-points { display: flex; flex-direction: column; gap: 0.9rem; }
+.solution-point {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.point-check {
+  width: 20px; height: 20px; min-width: 20px;
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 0.65rem;
+  margin-top: 2px;
+}
+.flow-diagram {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+.flow-steps { display: flex; flex-direction: column; gap: 0; }
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: background 0.3s;
+  cursor: default;
+}
+.flow-step.active { background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(13,148,136,0.04)); }
+.flow-step-num {
+  width: 36px; height: 36px; min-width: 36px;
+  border-radius: 50%;
+  background: var(--off-white);
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all 0.3s;
+}
+.flow-step.active .flow-step-num {
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  border-color: transparent;
+  color: white;
+}
+.flow-step-content h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.flow-step-content p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+.flow-connector {
+  width: 2px; height: 24px;
+  background: linear-gradient(180deg, var(--blue), var(--teal));
+  margin-left: 29px;
+  opacity: 0.3;
+}
+.flow-connector.active { opacity: 1; }
+
+/* ============================
+   FEATURES SECTION
+   ============================ */
+#features {
+  padding: 50px 0;
+  background: var(--white);
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+}
+.feature-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(135deg, rgba(59,130,246,0.04), rgba(13,148,136,0.02));
+  opacity:0;
+  transition: opacity 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59,130,246,0.2);
+}
+.feature-card:hover::before { opacity:1; }
+.feature-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.feature-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.feature-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ============================
+   HOW IT WORKS
+   ============================ */
+#how {
+  padding: 50px 0;
+  background: var(--off-white);
+}
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  position: relative;
+}
+.how-steps::before {
+  content:'';
+  position:absolute;
+  top: 28px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+  opacity: 0.25;
+  z-index: 0;
+}
+.how-step {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+.how-step-num {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 4px 16px rgba(59,130,246,0.35);
+}
+.how-step-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+.how-step-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* ============================
+   ROI CALCULATOR
+   ============================ */
+#roi {
+  padding: 50px 0;
+  background: var(--white);
+}
+.roi-card {
+  background: linear-gradient(135deg, #EFF6FF 0%, #F0FDFA 100%);
+  border: 1px solid rgba(59,130,246,0.15);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-md);
+}
+.roi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.roi-inputs h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.roi-inputs p { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 2rem; }
+.roi-field { margin-bottom: 1.5rem; }
+.roi-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.roi-field input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--blue) var(--val,50%), rgba(59,130,246,0.2) var(--val,50%));
+  outline: none;
+  cursor: pointer;
+}
+.roi-field input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance:none;
+  width:20px; height:20px;
+  border-radius:50%;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.4);
+  cursor:pointer;
+}
+.roi-field-val {
+  display: flex; justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.roi-field-val strong { color: var(--blue); font-size: 0.9rem; }
+.roi-results {}
+.roi-result-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+.roi-result-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.roi-result-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.roi-result-sub { font-size: 0.78rem; color: var(--text-muted); }
+.roi-cta-btn {
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: center;
+  padding: 14px;
+}
+
+/* ============================
+   LEAD MAGNET
+   ============================ */
+#audit {
+  padding: 50px 0;
+  background: var(--off-white);
+}
+.audit-card {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.audit-top {
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(59,130,246,0.05) 0%, rgba(13,148,136,0.04) 100%);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.audit-top h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+.audit-top p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; }
+.audit-form { padding: 2.5rem 3rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field.full { grid-column: 1/-1; }
+.form-field label { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); }
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 11px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--off-white);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: all 0.2s;
+}
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--blue);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+.form-field input.error { border-color: var(--red); box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
+.form-error { font-size: 0.75rem; color: var(--red); margin-top: 3px; display: none; }
+.form-error.show { display: block; }
+.file-drop {
+  border: 2px dashed rgba(59,130,246,0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(59,130,246,0.02);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.file-drop:hover { background: rgba(59,130,246,0.05); border-color: var(--blue); }
+.file-drop-icon { font-size: 1.8rem; margin-bottom: 6px; }
+.file-drop p { font-size: 0.82rem; color: var(--text-muted); }
+.file-drop span { color: var(--blue); font-weight: 600; }
+.audit-submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  border-radius: var(--radius-lg);
+}
+.security-note {
+  display: flex; align-items: center; justify-content: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+/* ============================
+   COMPLIANCE SECTION
+   ============================ */
+#compliance {
+  padding: 50px 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+}
+.compliance-certs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cert-item {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 1.4rem 1.8rem;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.25s;
+  cursor: default;
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+}
+.cert-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(59,130,246,0.25);
+}
+.cert-icon { font-size: 2rem; }
+.cert-name { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
+.cert-sub { font-size: 0.7rem; color: var(--text-muted); }
+.cert-tooltip {
+  position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(4px);
+  background: var(--text-primary); color: white;
+  font-size: 0.7rem; padding: 6px 12px; border-radius: 8px;
+  white-space: nowrap; opacity: 0; pointer-events: none; transition: all 0.2s;
+}
+.cert-tooltip::after {
+  content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  border:5px solid transparent; border-top-color:var(--text-primary);
+}
+.cert-item:hover .cert-tooltip { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ============================
+   SOCIAL PROOF
+   ============================ */
+#proof {
+  padding: 50px 0;
+  background: var(--off-white);
+}
+.metrics-strip {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+.metric-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.metric-label { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); }
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
+}
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+.testimonial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.testimonial-stars { font-size: 0.9rem; color: var(--amber); margin-bottom: 1rem; letter-spacing: 2px; }
+.testimonial-quote { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 10px; }
+.author-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 700; color: white;
+}
+.author-name { font-size: 0.88rem; font-weight: 700; color: var(--text-primary); }
+.author-role { font-size: 0.76rem; color: var(--text-muted); }
+
+/* ============================
+   FINAL CTA
+   ============================ */
+#cta-final {
+  padding: 50px 0;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.cta-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 50%, rgba(59,130,246,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 20% 20%, rgba(13,148,136,0.05) 0%, transparent 50%);
+}
+.cta-inner { text-align: center; position: relative; }
+.cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+}
+.cta-inner p { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.cta-btns { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+/* Footer styles are provided by footer.html */
+
+/* ============================
+   STICKY CTA
+   ============================ */
+.sticky-cta {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  z-index: 999;
+  display: flex; flex-direction: column; gap: 10px;
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+}
+.sticky-cta.visible { opacity:1; transform:translateY(0); pointer-events: all; }
+.sticky-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 13px 20px;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+.sticky-primary {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  color: white;
+}
+.sticky-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59,130,246,0.45); }
+
+/* ============================
+   EXIT INTENT POPUP
+   ============================ */
+.overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(15,23,42,0.5);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.35s;
+}
+.overlay.open { opacity:1; pointer-events: all; }
+.popup {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  max-width: 480px; width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  transform: scale(0.92) translateY(10px);
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.overlay.open .popup { transform: scale(1) translateY(0); }
+.popup-close {
+  position: absolute; top: 1rem; right: 1rem;
+  width: 32px; height: 32px;
+  background: var(--off-white); border: none; border-radius: 50%;
+  cursor: pointer; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); transition: all 0.2s;
+}
+.popup-close:hover { background: var(--surface); color: var(--text-primary); }
+.popup-emoji { font-size: 3rem; margin-bottom: 1rem; }
+.popup h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary); margin-bottom: 0.5rem;
+}
+.popup p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.65; }
+.popup-form { display: flex; gap: 8px; flex-direction: column; }
+.popup-form input {
+  padding: 12px 16px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  background: var(--off-white);
+  outline: none;
+  transition: all 0.2s;
+}
+.popup-form input:focus { border-color: var(--blue); background: white; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+.popup-dismiss { font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; cursor: pointer; text-decoration: underline; }
+
+/* ============================
+   ANIMATIONS (SCROLL)
+   ============================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media(max-width: 900px) {
+  .hero-grid, .solution-grid, .roi-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .problems-grid, .features-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .metrics-strip { grid-template-columns: repeat(2,1fr); }
+  .how-steps { grid-template-columns: repeat(2,1fr); }
+  .how-steps::before { display: none; }
+  .form-grid { grid-template-columns: 1fr; }
+  /* nav-links hidden in mobile handled by navbar.html */
+  .float-kpi-1, .float-kpi-2 { display: none; }
+  .dashboard-card { transform: none !important; animation: none !important; }
+  .hero-headline { font-size: 2.2rem; }
+  .audit-form { padding: 2rem; }
+  .audit-top { padding: 2rem; }
+  .roi-card { padding: 2rem; }
+}
+@media(max-width: 600px) {
+  .metrics-strip { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; }
+  .compliance-certs { gap: 0.8rem; }
+  .cta-btns { flex-direction: column; align-items: stretch; }
+  .cta-btns .btn { justify-content: center; }
+  /* footer responsive handled by footer.html */
+  .trust-inner { gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Include Navbar -->
+<div id="navbar-container"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      const container = document.getElementById('navbar-container');
+      container.innerHTML = data;
+      // Execute scripts from navbar.html
+      container.querySelectorAll('script').forEach(oldScript => {
+        const newScript = document.createElement('script');
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+          newScript.async = oldScript.async;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(newScript);
+      });
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script>
+
+<!-- ============================
+     HERO SECTION
+     ============================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- LEFT -->
+      <div class="hero-left">
+        <!-- <div class="hero-badge reveal">
+          <div class="hero-badge-dot"></div>
+          AI-Powered Healthcare Operations
+        </div> -->
+        <h1 class="hero-headline reveal reveal-delay-1">
+          Intelligent AI for<br>
+          <span class="gradient-text">Modern Healthcare<br>Revenue Systems</span>
+        </h1>
+        <p class="hero-subtext reveal reveal-delay-2">
+          ClaimPilot reduces claim denials, automates billing workflows, and accelerates reimbursements — so your revenue cycle works as hard as your clinical teams.
+        </p>
+        <div class="hero-ctas reveal reveal-delay-3">
+          <a href="#audit" class="btn btn-primary btn-lg">
+            <span>📅</span> Book a Demo
+          </a>
+          <a href="#audit" class="btn btn-outline-blue btn-lg">
+            <span>🔍</span> Get Free Claim Audit
+          </a>
+        </div>
+        <!-- <div class="hero-trust reveal reveal-delay-4">
+          <div class="hero-trust-avatars">
+            <div class="hero-trust-avatar" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8)">R</div>
+            <div class="hero-trust-avatar" style="background:linear-gradient(135deg,#0D9488,#0F766E)">A</div>
+            <div class="hero-trust-avatar" style="background:linear-gradient(135deg,#7C3AED,#5B21B6)">S</div>
+            <div class="hero-trust-avatar" style="background:linear-gradient(135deg,#F59E0B,#D97706)">P</div>
+          </div>
+          <span>Trusted by <strong>leading hospitals</strong> across India</span>
+        </div> -->
+      </div>
+
+      <!-- RIGHT: DASHBOARD -->
+      <div class="hero-dashboard reveal reveal-delay-2">
+        <div class="float-kpi float-kpi-1">
+          <div class="float-kpi-icon">📈</div>
+          <div class="float-kpi-label">Approval Rate</div>
+          <div class="float-kpi-val" style="color:var(--green)">+23.4%</div>
+        </div>
+        <div class="float-kpi float-kpi-2">
+          <div class="float-kpi-icon">⚡</div>
+          <div class="float-kpi-label">Avg. Settlement</div>
+          <div class="float-kpi-val" style="color:var(--blue)">4.2 days</div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-header">
+            <span class="dashboard-title">ClaimPilot Dashboard</span>
+            <span class="live-badge"><span class="live-dot"></span> Live</span>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Claims Processed</div>
+              <div class="kpi-value" id="kpi1">1,247</div>
+              <div class="kpi-change">↑ 12% this week</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Denial Rate</div>
+              <div class="kpi-value" id="kpi2">3.2%</div>
+              <div class="kpi-change neg">↓ 68% reduced</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Revenue Saved</div>
+              <div class="kpi-value" id="kpi3">₹4.8M</div>
+              <div class="kpi-change">↑ This month</div>
+            </div>
+          </div>
+          <div class="chart-area">
+            <div class="chart-label">Revenue Recovery Trend (Last 7 Days)</div>
+            <svg class="mini-chart" viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.25"/>
+                  <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,55 L45,48 L90,42 L135,35 L180,28 L225,20 L270,14 L320,8" stroke="#3B82F6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" id="chart-line"/>
+              <path d="M0,55 L45,48 L90,42 L135,35 L180,28 L225,20 L270,14 L320,8 L320,70 L0,70Z" fill="url(#chartGrad)" id="chart-area"/>
+              <circle cx="320" cy="8" r="4" fill="#3B82F6" opacity="0.9">
+                <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+          <div class="claim-alerts">
+            <div class="claim-row">
+              <span class="claim-id">CLM-4821</span>
+              <span class="claim-amount">₹1,24,000</span>
+              <span class="status-pill status-approved">Approved</span>
+            </div>
+            <div class="claim-row">
+              <span class="claim-id">CLM-4820</span>
+              <span class="claim-amount">₹87,500</span>
+              <span class="status-pill status-review">In Review</span>
+            </div>
+            <div class="claim-row">
+              <span class="claim-id">CLM-4819</span>
+              <span class="claim-amount">₹2,10,000</span>
+              <span class="status-pill status-approved">Approved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     TRUST STRIP
+     ============================ -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <div class="trust-icon" style="background:rgba(59,130,246,0.1)">🏥</div>
+        HIPAA Compliant
+        <div class="trust-tooltip">Health Insurance Portability & Accountability Act certified</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon" style="background:rgba(13,148,136,0.1)">🇮🇳</div>
+        ABDM Ready
+        <div class="trust-tooltip">Ayushman Bharat Digital Mission integrated</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon" style="background:rgba(79,70,229,0.1)">🔐</div>
+        ISO 27001
+        <div class="trust-tooltip">Information Security Management certified</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon" style="background:rgba(16,185,129,0.1)">🔒</div>
+        256-bit Encryption
+        <div class="trust-tooltip">AES-256 encryption for all patient data at rest and in transit</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon" style="background:rgba(245,158,11,0.1)">✅</div>
+        SOC 2 Type II
+        <div class="trust-tooltip">Service Organization Control 2 security compliance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     PROBLEM SECTION
+     ============================ -->
+<section id="problems">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">The Revenue Leak Problem</div>
+      <h2 class="section-title reveal reveal-delay-1">Revenue is Slipping Through<br>Operational Cracks</h2>
+      <p class="section-sub reveal reveal-delay-2">Healthcare providers lose millions annually to preventable billing inefficiencies. ClaimPilot was built to fix exactly this.</p>
+    </div>
+    <div class="problems-grid">
+      <div class="problem-card reveal">
+        <div class="problem-icon" style="background:rgba(239,68,68,0.08)">❌</div>
+        <div class="problem-title">High Denial Rates</div>
+        <div class="problem-desc">Up to 30% of claims are denied on first submission, creating costly rework cycles and delayed cash flow for hospitals.</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="problem-icon" style="background:rgba(245,158,11,0.08)">⏳</div>
+        <div class="problem-title">Slow Reimbursements</div>
+        <div class="problem-desc">Manual billing workflows extend settlement timelines to 45+ days, straining working capital and financial planning.</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="problem-icon" style="background:rgba(79,70,229,0.08)">🔀</div>
+        <div class="problem-title">Manual Errors</div>
+        <div class="problem-desc">Human data entry mistakes account for 60% of preventable denials. Every error costs time, money, and staff morale.</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="problem-icon" style="background:rgba(59,130,246,0.08)">📉</div>
+        <div class="problem-title">Revenue Leakage</div>
+        <div class="problem-desc">Hospitals lose 5–15% of potential revenue due to missed charges, incorrect coding, and underclaiming on complex cases.</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="problem-icon" style="background:rgba(13,148,136,0.08)">🔄</div>
+        <div class="problem-title">Complex Compliance</div>
+        <div class="problem-desc">Navigating ABDM, TPA, and insurer-specific rules manually is untenable for billing teams and creates audit exposure.</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-3">
+        <div class="problem-icon" style="background:rgba(16,185,129,0.08)">📊</div>
+        <div class="problem-title">No Revenue Visibility</div>
+        <div class="problem-desc">Finance teams operate without real-time insight into claim status, denial trends, or projected collections — flying blind.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SOLUTION SECTION
+     ============================ -->
+<section id="solution">
+  <div class="container">
+    <div class="solution-grid">
+      <div class="solution-text">
+        <div class="section-tag reveal">The ClaimPilot Difference</div>
+        <h2 class="reveal reveal-delay-1">From Claim Submission<br>to Revenue — <span style="background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Automated</span></h2>
+        <p class="reveal reveal-delay-2">ClaimPilot's AI engine analyzes every claim before submission, flags potential denials, routes edge cases intelligently, and provides real-time status — all while learning from your hospital's specific payer patterns.</p>
+        <div class="solution-points reveal reveal-delay-3">
+          <div class="solution-point">
+            <div class="point-check">✓</div>
+            <span><strong>AI-driven pre-submission validation</strong> catches errors before they become denials</span>
+          </div>
+          <div class="solution-point">
+            <div class="point-check">✓</div>
+            <span><strong>Automated workflow routing</strong> eliminates manual handoffs and bottlenecks</span>
+          </div>
+          <div class="solution-point">
+            <div class="point-check">✓</div>
+            <span><strong>Payer-specific intelligence</strong> adapts to rules across 100+ TPAs and insurers</span>
+          </div>
+          <div class="solution-point">
+            <div class="point-check">✓</div>
+            <span><strong>Real-time revenue analytics</strong> with actionable insight for finance leaders</span>
+          </div>
+          <div class="solution-point">
+            <div class="point-check">✓</div>
+            <span><strong>ABDM & HIPAA native</strong> — compliance built in, not bolted on</span>
+          </div>
+        </div>
+      </div>
+      <div class="flow-diagram reveal reveal-delay-2">
+        <div style="font-size:0.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.2rem;">Claim Processing Flow</div>
+        <div class="flow-steps" id="flow-steps">
+          <div class="flow-step active" data-step="0">
+            <div class="flow-step-num">1</div>
+            <div class="flow-step-content">
+              <h4>Claim Ingestion</h4>
+              <p>Structured data from HIS, scanned documents, or manual entry</p>
+            </div>
+          </div>
+          <div class="flow-connector active"></div>
+          <div class="flow-step" data-step="1">
+            <div class="flow-step-num">2</div>
+            <div class="flow-step-content">
+              <h4>AI Validation Engine</h4>
+              <p>360° analysis: codes, eligibility, payer rules, duplicates</p>
+            </div>
+          </div>
+          <div class="flow-connector"></div>
+          <div class="flow-step" data-step="2">
+            <div class="flow-step-num">3</div>
+            <div class="flow-step-content">
+              <h4>Intelligent Routing</h4>
+              <p>Auto-approve clean claims, flag edge cases for review</p>
+            </div>
+          </div>
+          <div class="flow-connector"></div>
+          <div class="flow-step" data-step="3">
+            <div class="flow-step-num">4</div>
+            <div class="flow-step-content">
+              <h4>Payer Submission</h4>
+              <p>Direct digital submission with real-time status tracking</p>
+            </div>
+          </div>
+          <div class="flow-connector"></div>
+          <div class="flow-step" data-step="4">
+            <div class="flow-step-num">5</div>
+            <div class="flow-step-content">
+              <h4>Revenue Realization</h4>
+              <p>Faster approvals, reconciliation, and analytics dashboard</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FEATURES SECTION
+     ============================ -->
+<section id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">Platform Capabilities</div>
+      <h2 class="section-title reveal reveal-delay-1">Everything Your Revenue Cycle<br>Team Needs</h2>
+      <p class="section-sub reveal reveal-delay-2">Purpose-built for Indian healthcare — from single specialty clinics to multi-site hospital networks.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-title">AI Denial Prediction</div>
+        <div class="feature-desc">Machine learning model trained on millions of Indian healthcare claims predicts denial risk with 94%+ accuracy before submission.</div>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Automated Billing Workflows</div>
+        <div class="feature-desc">End-to-end automation from charge capture to final settlement — with configurable rules for your specific payer mix.</div>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">Revenue Intelligence Dashboard</div>
+        <div class="feature-desc">Real-time visibility into claim status, denial trends, recovery rates, and projected collections across all departments.</div>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">Smart Denial Appeals</div>
+        <div class="feature-desc">Automated appeal letter generation with supporting documentation packages — cutting appeal time from days to minutes.</div>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">🏥</div>
+        <div class="feature-title">HIS Integration</div>
+        <div class="feature-desc">Native connectors for leading Hospital Information Systems. Go live in days with minimal IT effort via our pre-built APIs.</div>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">Compliance Automation</div>
+        <div class="feature-desc">Always-on compliance monitoring for ABDM, TPA guidelines, and insurer-specific coding rules — updated in real time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     HOW IT WORKS
+     ============================ -->
+<section id="how">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">Implementation</div>
+      <h2 class="section-title reveal reveal-delay-1">Up and Running in Days,<br>Not Months</h2>
+      <p class="section-sub reveal reveal-delay-2">ClaimPilot's implementation is designed for minimal disruption to your existing workflows.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step reveal">
+        <div class="how-step-num">1</div>
+        <div class="how-step-title">Discovery Call</div>
+        <div class="how-step-desc">30-minute session to understand your current workflow, payer mix, and revenue goals</div>
+      </div>
+      <div class="how-step reveal reveal-delay-1">
+        <div class="how-step-num">2</div>
+        <div class="how-step-title">Integration Setup</div>
+        <div class="how-step-desc">Connect your HIS via pre-built API. Our team handles the technical setup end-to-end</div>
+      </div>
+      <div class="how-step reveal reveal-delay-2">
+        <div class="how-step-num">3</div>
+        <div class="how-step-title">AI Calibration</div>
+        <div class="how-step-desc">We train ClaimPilot on your historical claims and payer-specific patterns for maximum accuracy</div>
+      </div>
+      <div class="how-step reveal reveal-delay-3">
+        <div class="how-step-num">4</div>
+        <div class="how-step-title">Go Live & Scale</div>
+        <div class="how-step-desc">Full deployment with dedicated support. Most clients see measurable ROI within 30 days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     ROI CALCULATOR
+     ============================ -->
+<section id="roi">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">ROI Calculator</div>
+      <h2 class="section-title reveal reveal-delay-1">Calculate Your Revenue Recovery</h2>
+      <p class="section-sub reveal reveal-delay-2">See exactly how much ClaimPilot could recover for your hospital.</p>
+    </div>
+    <div class="roi-card reveal">
+      <div class="roi-grid">
+        <div class="roi-inputs">
+          <h3>Your Hospital Profile</h3>
+          <p>Adjust the sliders to match your current situation</p>
+          <div class="roi-field">
+            <label>Monthly Claims Submitted: <strong id="claims-val">2,000</strong></label>
+            <input type="range" id="claims-range" min="500" max="20000" step="500" value="2000">
+            <div class="roi-field-val"><span>500</span><span>20,000</span></div>
+          </div>
+          <div class="roi-field">
+            <label>Current Denial Rate: <strong id="denial-val">18%</strong></label>
+            <input type="range" id="denial-range" min="5" max="40" step="1" value="18">
+            <div class="roi-field-val"><span>5%</span><span>40%</span></div>
+          </div>
+          <div class="roi-field">
+            <label>Average Claim Value: <strong id="value-val">₹45,000</strong></label>
+            <input type="range" id="value-range" min="10000" max="200000" step="5000" value="45000">
+            <div class="roi-field-val"><span>₹10K</span><span>₹2L</span></div>
+          </div>
+        </div>
+        <div class="roi-results">
+          <div class="roi-result-card">
+            <div class="roi-result-label">Current Monthly Revenue Loss</div>
+            <div class="roi-result-value" id="roi-loss">₹1.62 Cr</div>
+            <div class="roi-result-sub">From preventable denials at current rates</div>
+          </div>
+          <div class="roi-result-card">
+            <div class="roi-result-label">Projected Annual Savings with ClaimPilot</div>
+            <div class="roi-result-value" id="roi-savings" style="background:linear-gradient(135deg,var(--green),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">₹16.4 Cr</div>
+            <div class="roi-result-sub">Based on 85% denial reduction rate (industry average)</div>
+          </div>
+          <div class="roi-result-card" style="background:linear-gradient(135deg,rgba(59,130,246,0.04),rgba(13,148,136,0.02));border-color:rgba(59,130,246,0.2)">
+            <div class="roi-result-label">Estimated Payback Period</div>
+            <div class="roi-result-value" id="roi-payback">6 weeks</div>
+            <div class="roi-result-sub">ClaimPilot typically pays for itself in the first month</div>
+          </div>
+          <a href="#audit" class="btn btn-primary roi-cta-btn">Get My Custom ROI Report →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     LEAD MAGNET
+     ============================ -->
+<section id="audit">
+  <div class="container">
+    <div class="audit-card reveal">
+      <div class="audit-top">
+        <div class="section-tag" style="margin-bottom:1rem">Free · No Obligation · Instant Insights</div>
+        <h2>Get Your Free Claim Denial<br>Risk Audit</h2>
+        <p>Upload a sample of your recent claims and our AI will identify your top denial risks, revenue leakage patterns, and quick-win opportunities — completely free.</p>
+      </div>
+      <div class="audit-form">
+        <form id="audit-form" onsubmit="return submitAudit(event)">
+          <div class="form-grid">
+            <div class="form-field">
+              <label>Full Name *</label>
+              <input type="text" id="f-name" placeholder="Dr. Rajesh Sharma" autocomplete="name">
+              <div class="form-error" id="e-name">Please enter your full name</div>
+            </div>
+            <div class="form-field">
+              <label>Designation</label>
+              <input type="text" id="f-role" placeholder="CFO / Revenue Cycle Head">
+            </div>
+            <div class="form-field">
+              <label>Hospital / Organization *</label>
+              <input type="text" id="f-hospital" placeholder="Apollo Hospitals, Delhi" autocomplete="organization">
+              <div class="form-error" id="e-hospital">Please enter your hospital name</div>
+            </div>
+            <div class="form-field">
+              <label>Work Email *</label>
+              <input type="email" id="f-email" placeholder="rajesh@hospital.com" autocomplete="email">
+              <div class="form-error" id="e-email">Please enter a valid email address</div>
+            </div>
+            <div class="form-field full">
+              <label>Upload Sample Claims (optional)</label>
+              <div class="file-drop" onclick="document.getElementById('file-input').click()">
+                <div class="file-drop-icon">📄</div>
+                <p><span>Click to upload</span> or drag and drop</p>
+                <p style="margin-top:4px;font-size:0.72rem">CSV, Excel, or PDF · Max 10MB · Data stays secure</p>
+                <input type="file" id="file-input" style="display:none" accept=".csv,.xlsx,.pdf">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary audit-submit-btn">
+            🔍 Analyze My Claims Securely →
+          </button>
+          <div class="security-note">
+            🔐 Your data is encrypted end-to-end and never shared. HIPAA & ABDM compliant.
+          </div>
+        </form>
+        <div id="audit-success" style="display:none;text-align:center;padding:2rem 0">
+          <div style="font-size:3rem;margin-bottom:1rem">🎉</div>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:0.5rem">You're all set!</h3>
+          <p style="color:var(--text-secondary)">Our team will review your information and send your free Claim Denial Risk Audit within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     COMPLIANCE SECTION
+     ============================ -->
+<section id="compliance">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:2.5rem">
+      <div class="section-tag reveal">Security & Compliance</div>
+      <h2 class="section-title reveal reveal-delay-1">Enterprise-Grade Security,<br>Built for Healthcare</h2>
+    </div>
+    <div class="compliance-certs reveal reveal-delay-1">
+      <div class="cert-item">
+        <div class="cert-icon">🏥</div>
+        <div class="cert-name">HIPAA</div>
+        <div class="cert-sub">Compliant</div>
+        <div class="cert-tooltip">Full HIPAA compliance for PHI handling</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon">🇮🇳</div>
+        <div class="cert-name">ABDM</div>
+        <div class="cert-sub">Integrated</div>
+        <div class="cert-tooltip">Ayushman Bharat Digital Mission ready</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon">📋</div>
+        <div class="cert-name">DPDP</div>
+        <div class="cert-sub">Compliant</div>
+        <div class="cert-tooltip">Digital Personal Data Protection Act 2023</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon">✅</div>
+        <div class="cert-name">SOC 2</div>
+        <div class="cert-sub">Type II</div>
+        <div class="cert-tooltip">Annual SOC 2 Type II audit certified</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon">🔐</div>
+        <div class="cert-name">ISO 27001</div>
+        <div class="cert-sub">Certified</div>
+        <div class="cert-tooltip">Information Security Management System</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon">🛡️</div>
+        <div class="cert-name">AES-256</div>
+        <div class="cert-sub">Encryption</div>
+        <div class="cert-tooltip">Military-grade encryption at rest and in transit</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SOCIAL PROOF
+     ============================ -->
+<section id="proof">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">Results That Speak</div>
+      <h2 class="section-title reveal reveal-delay-1">Trusted by Healthcare Leaders<br>Across India</h2>
+    </div>
+    <div class="metrics-strip">
+      <div class="metric-card reveal">
+        <div class="metric-value" data-target="68">0%</div>
+        <div class="metric-label">Reduction in Claim Denials</div>
+      </div>
+      <div class="metric-card reveal reveal-delay-1">
+        <div class="metric-value" data-target="4.2" data-suffix="x">0x</div>
+        <div class="metric-label">Faster Reimbursements</div>
+      </div>
+      <div class="metric-card reveal reveal-delay-2">
+        <div class="metric-value" data-target="120" data-suffix="+">0+</div>
+        <div class="metric-label">Hospitals Onboarded</div>
+      </div>
+      <div class="metric-card reveal reveal-delay-3">
+        <div class="metric-value" data-target="94" data-suffix="%">0%</div>
+        <div class="metric-label">AI Prediction Accuracy</div>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"ClaimPilot transformed our revenue cycle. Our denial rate dropped from 22% to under 4% in 60 days. The AI-driven pre-validation alone saved us crores in the first quarter."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8)">RS</div>
+          <div>
+            <div class="author-name">Dr. Rajiv Sinha</div>
+            <div class="author-role">CFO, Fortis Regional Hospital</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"The ROI was immediate. We processed ₹8 crore in previously denied claims in the first month. The dashboard gives our finance team unprecedented visibility."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#0D9488,#0F766E)">AP</div>
+          <div>
+            <div class="author-name">Anita Pillai</div>
+            <div class="author-role">VP Operations, Manipal Hospitals</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"Integration with our existing HIS took less than a week. The ABDM and TPA compliance handling is exactly what a modern multi-specialty hospital needs."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#7C3AED,#5B21B6)">SK</div>
+          <div>
+            <div class="author-name">Suresh Kumar</div>
+            <div class="author-role">Head of Billing, Max Healthcare</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FINAL CTA
+     ============================ -->
+<section id="cta-final">
+  <div class="cta-bg"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-tag reveal" style="margin:0 auto 1.2rem">Ready to Transform Your Revenue Cycle?</div>
+      <h2 class="reveal reveal-delay-1">Stop Losing Revenue<br>to Claim Denials</h2>
+      <p class="reveal reveal-delay-2">Join 120+ hospitals already recovering millions in revenue with ClaimPilot. Start with a free audit — no commitment required.</p>
+      <div class="cta-btns reveal reveal-delay-3">
+        <a href="#audit" class="btn btn-primary btn-lg">🔍 Get Free Claim Audit</a>
+        <a href="#audit" class="btn btn-outline-blue btn-lg">📅 Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Footer -->
+<div id="footer-container"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      const container = document.getElementById('footer-container');
+      container.innerHTML = data;
+      // Execute scripts from footer.html
+      container.querySelectorAll('script').forEach(oldScript => {
+        const newScript = document.createElement('script');
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+          newScript.async = oldScript.async;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(newScript);
+      });
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>
+
+<!-- ============================
+     STICKY CTA
+     ============================ -->
+<div class="sticky-cta" id="sticky-cta">
+  <button class="sticky-btn sticky-primary" onclick="document.getElementById('audit').scrollIntoView({behavior:'smooth'})">
+    📅 Book a Demo
+  </button>
+</div>
+
+<!-- ============================
+     EXIT INTENT POPUP
+     ============================ -->
+<div class="overlay" id="exit-overlay">
+  <div class="popup" style="position:relative">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div class="popup-emoji">💡</div>
+    <h3>Wait — Get Your Free<br>Claim Audit First</h3>
+    <p>Before you go, let our AI analyze your top 3 denial risks for free. Most hospitals discover ₹50L+ in recoverable revenue.</p>
+    <div class="popup-form">
+      <input type="email" placeholder="Your work email address" id="popup-email">
+      <button class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:0.95rem" onclick="submitPopup()">
+        Claim My Free Audit →
+      </button>
+    </div>
+    <div class="popup-dismiss" onclick="closePopup()">No thanks, I'll leave revenue on the table</div>
+  </div>
+</div>
+
+<!-- ============================
+     JAVASCRIPT
+     ============================ -->
+<script>
+// ---- NAVBAR SCROLL (handled by navbar.html) ----
+
+// ---- STICKY CTA SCROLL ----
+window.addEventListener('scroll', () => {
+  const stickyCta = document.getElementById('sticky-cta');
+  if (window.scrollY > 500) stickyCta.classList.add('visible');
+  else stickyCta.classList.remove('visible');
+});
+
+// ---- INTERSECTION OBSERVER (REVEAL) ----
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// ---- ANIMATED COUNTERS ----
+function animateCounter(el, target, suffix = '%', decimals = 0) {
+  let start = 0;
+  const duration = 1800;
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const val = decimals > 0
+      ? (ease * target).toFixed(decimals)
+      : Math.floor(ease * target);
+    el.textContent = val + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const metricObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target.querySelector('.metric-value');
+      if (!el) return;
+      const target = parseFloat(el.getAttribute('data-target'));
+      const suffix = el.getAttribute('data-suffix') || '%';
+      const decimals = target % 1 !== 0 ? 1 : 0;
+      animateCounter(el, target, suffix, decimals);
+      metricObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.metric-card').forEach(el => metricObserver.observe(el));
+
+// ---- FLOW DIAGRAM ANIMATION ----
+let currentFlowStep = 0;
+const flowSteps = document.querySelectorAll('.flow-step');
+const flowConnectors = document.querySelectorAll('.flow-connector');
+function advanceFlow() {
+  flowSteps.forEach((s, i) => {
+    s.classList.toggle('active', i === currentFlowStep);
+  });
+  flowConnectors.forEach((c, i) => {
+    c.classList.toggle('active', i < currentFlowStep);
+  });
+  currentFlowStep = (currentFlowStep + 1) % flowSteps.length;
+}
+setInterval(advanceFlow, 1500);
+
+// ---- ROI CALCULATOR ----
+function formatINR(n) {
+  if (n >= 10000000) return '₹' + (n / 10000000).toFixed(1) + ' Cr';
+  if (n >= 100000) return '₹' + (n / 100000).toFixed(1) + ' L';
+  if (n >= 1000) return '₹' + (n / 1000).toFixed(0) + 'K';
+  return '₹' + n;
+}
+
+function updateROI() {
+  const claims = parseInt(document.getElementById('claims-range').value);
+  const denialRate = parseInt(document.getElementById('denial-range').value) / 100;
+  const avgValue = parseInt(document.getElementById('value-range').value);
+
+  document.getElementById('claims-val').textContent = claims.toLocaleString('en-IN');
+  document.getElementById('denial-val').textContent = Math.round(denialRate * 100) + '%';
+  document.getElementById('value-val').textContent = formatINR(avgValue);
+
+  const monthlyLoss = claims * denialRate * avgValue;
+  const annualSavings = monthlyLoss * 12 * 0.85;
+  const paybackWeeks = Math.max(2, Math.min(12, Math.round(6 - (monthlyLoss / 5000000))));
+
+  document.getElementById('roi-loss').textContent = formatINR(monthlyLoss);
+  document.getElementById('roi-savings').textContent = formatINR(annualSavings);
+  document.getElementById('roi-payback').textContent = paybackWeeks + ' weeks';
+
+  // Update range gradient
+  ['claims-range','denial-range','value-range'].forEach(id => {
+    const el = document.getElementById(id);
+    const min = parseFloat(el.min), max = parseFloat(el.max), val = parseFloat(el.value);
+    const pct = ((val - min) / (max - min)) * 100;
+    el.style.setProperty('--val', pct + '%');
+    el.style.background = `linear-gradient(90deg, var(--blue) 0%, var(--blue) ${pct}%, rgba(59,130,246,0.2) ${pct}%)`;
+  });
+}
+document.getElementById('claims-range').addEventListener('input', updateROI);
+document.getElementById('denial-range').addEventListener('input', updateROI);
+document.getElementById('value-range').addEventListener('input', updateROI);
+updateROI();
+
+// ---- FORM VALIDATION ----
+function submitAudit(e) {
+  e.preventDefault();
+  let valid = true;
+
+  const name = document.getElementById('f-name');
+  const hospital = document.getElementById('f-hospital');
+  const email = document.getElementById('f-email');
+
+  document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+  document.querySelectorAll('.form-field input').forEach(el => el.classList.remove('error'));
+
+  if (!name.value.trim()) {
+    document.getElementById('e-name').classList.add('show');
+    name.classList.add('error');
+    valid = false;
+  }
+  if (!hospital.value.trim()) {
+    document.getElementById('e-hospital').classList.add('show');
+    hospital.classList.add('error');
+    valid = false;
+  }
+  if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    document.getElementById('e-email').classList.add('show');
+    email.classList.add('error');
+    valid = false;
+  }
+
+  if (valid) {
+    document.getElementById('audit-form').style.display = 'none';
+    document.getElementById('audit-success').style.display = 'block';
+  }
+  return false;
+}
+
+// ---- FILE DROP LABEL ----
+document.getElementById('file-input').addEventListener('change', function() {
+  if (this.files.length > 0) {
+    this.closest('.file-drop').querySelector('p').innerHTML = `<span>✓ ${this.files[0].name}</span>`;
+  }
+});
+
+// ---- EXIT INTENT POPUP ----
+let popupShown = false;
+let popupTimer = setTimeout(() => {
+  if (!popupShown) showPopup();
+}, 45000);
+
+document.addEventListener('mouseleave', (e) => {
+  if (e.clientY < 5 && !popupShown && window.scrollY > 800) showPopup();
+});
+
+function showPopup() {
+  if (popupShown) return;
+  popupShown = true;
+  document.getElementById('exit-overlay').classList.add('open');
+}
+function closePopup() {
+  document.getElementById('exit-overlay').classList.remove('open');
+}
+function submitPopup() {
+  const email = document.getElementById('popup-email').value;
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('popup-email').style.borderColor = 'var(--red)';
+    return;
+  }
+  document.querySelector('.popup').innerHTML = `
+    <div style="text-align:center;padding:1rem 0">
+      <div style="font-size:3rem;margin-bottom:1rem">✅</div>
+      <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;margin-bottom:0.5rem">Request received!</h3>
+      <p style="color:var(--text-secondary)">We'll send your free audit to <strong>${email}</strong> within 24 hours.</p>
+      <button onclick="closePopup()" class="btn btn-primary" style="margin-top:1.5rem;padding:12px 24px">Close</button>
+    </div>
+  `;
+}
+
+// Close overlay on background click
+document.getElementById('exit-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
+
+// ---- HOVER TILT (Dashboard) ----
+const dashCard = document.querySelector('.dashboard-card');
+if (dashCard) {
+  const hero = document.querySelector('.hero-dashboard');
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    dashCard.style.transform = `perspective(1000px) rotateY(${-4 + x * 6}deg) rotateX(${2 - y * 4}deg) translateY(0)`;
+  });
+  hero.addEventListener('mouseleave', () => {
+    dashCard.style.transform = '';
+  });
+}
+
+// ---- KPI LIVE TICKER ----
+function updateKPI() {
+  const kpi1 = document.getElementById('kpi1');
+  const base = 1247;
+  const rand = base + Math.floor(Math.random() * 5);
+  kpi1.textContent = rand.toLocaleString('en-IN');
+}
+setInterval(updateKPI, 3000);
+</script>
+
+</body>
+</html>

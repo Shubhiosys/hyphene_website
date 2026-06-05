@@ -1,0 +1,418 @@
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="Hyphene Home">
+          <img src="logo1.png" alt="Hyphene Logo">
+        </a>
+        <p class="footer-tagline">AI-powered workflow automation that improves hospital efficiency and patient outcomes.</p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn" class="social-btn social-linkedin"><span class="social-label">in</span></a>
+          <a href="#" aria-label="X" class="social-btn social-x"><span class="social-label">X</span></a>
+          <a href="#" aria-label="Facebook" class="social-btn social-facebook"><span class="social-label">f</span></a>
+          <a href="#" aria-label="Instagram" class="social-btn social-instagram"><span class="social-label">ig</span></a>
+          <!-- <a href="#" aria-label="YouTube" class="social-btn social-youtube"><span class="social-label">yt</span></a> -->
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Products</div>
+        <div class="footer-links">
+          <a href="nurseops-landing.html" class="footer-link1">NurseOps</a>
+          <a href="claimpilot-landing.html" class="footer-link">ClaimPilot</a>
+          <!-- <a href="#" class="footer-link">Analytics Suite</a>
+          <a href="#" class="footer-link">Integrations</a>
+          <a href="#" class="footer-link">Pricing</a> -->
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">About Us</div>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link1">About Us</a>
+          <a href="#" class="footer-link">Careers</a>
+          <!-- <a href="#" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Press</a> -->
+          <a href="#" class="footer-link">Partners</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links contact-col">
+          <a href="mailto:HELLO@HYPHENE.AI" class="contact-item">
+            <!-- <span class="ci-icon">✉️</span> -->
+            <span class="ci-text">hello@hyphene.ai</span>
+          </a>
+
+          <!-- <a href="tel:+918012345678" class="contact-item">
+            <span class="ci-icon">📞</span>
+            <span class="ci-text">+91 80 1234 5678</span>
+          </a> -->
+
+          <div class="contact-item contact-address">
+            <!-- <span class="ci-icon">📍</span> -->
+            <span class="ci-text">#10, Doresanipalya, Opposite Kalyani Tech Park, JP Nagar, Bangalore – 560076</span>
+          </div>
+
+          <a href="contact.html" class="contact-sales">
+            <!-- <div class="cs-left">
+              <span class="cs-icon">🎧</span>
+            </div> -->
+            <div class="cs-right">
+              <div class="cs-title">Contact Sales</div>
+              <!-- <div class="cs-sub">We're here to help</div> -->
+            </div>
+            <div class="cs-arrow">›</div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Hyphene Inc. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="#">HIPAA</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer Styles */
+footer {
+  background: white;
+  color: var(--slate-400);
+  padding: 50px 0px 14px;
+  border-top: 1px solid var(--slate-200);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+/* Ensure columns align to the top for consistent layout */
+.footer-grid { align-items: start; }
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.footer-tagline { max-width: 220px; color: var(--slate-600); font-size: 14px; line-height:1.6; }
+.footer-social { display:flex; gap:12px; margin-top:6px; }
+.social-btn { width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:8px; background:var(--white); border:1px solid var(--slate-200); color:var(--slate-700); text-decoration:none; box-shadow: var(--shadow-sm); transition: all 0.18s; }
+.social-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); background: var(--slate-50); }
+.social-label { font-weight:700; font-size:14px; color:var(--slate-700); }
+
+/* Brand hover colors */
+.social-btn.social-linkedin:hover { background: #0A66C2; border-color:#0A66C2; box-shadow: 0 8px 20px rgba(10,102,194,0.12); }
+.social-btn.social-linkedin:hover .social-label { color: #ffffff; }
+
+.social-btn.social-x:hover { background: #1DA1F2; border-color:#1DA1F2; box-shadow: 0 8px 20px rgba(29,161,242,0.12); }
+.social-btn.social-x:hover .social-label { color: #ffffff; }
+
+.social-btn.social-facebook:hover { background: #1877F2; border-color:#1877F2; box-shadow: 0 8px 20px rgba(24,119,242,0.12); }
+.social-btn.social-facebook:hover .social-label { color: #ffffff; }
+
+.social-btn.social-instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); border-color: #d6249f; box-shadow: 0 8px 20px rgba(214,36,159,0.12); }
+.social-btn.social-instagram:hover .social-label { color: #ffffff; }
+
+.social-btn.social-youtube:hover { background: #FF0000; border-color:#FF0000; box-shadow: 0 8px 20px rgba(255,0,0,0.12); }
+.social-btn.social-youtube:hover .social-label { color: #ffffff; }
+.footer-links.contact-col { display:flex; flex-direction:column; gap:12px; }
+.contact-item { display:flex; gap:12px; align-items:flex-start; color:var(--slate-700); text-decoration:none; }
+.contact-item .ci-icon { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:8px; background:var(--blue-50); color:var(--blue-700); font-size:16px; flex: 0 0 36px; }
+.contact-item .ci-text { color:var(--slate-700); font-size:15px; line-height:1.4; }
+.contact-address .ci-text { max-width:220px; color:var(--slate-600); }
+.contact-sales { display:flex; align-items:center; gap:12px; padding:12px; border-radius:10px; background:var(--white); border:1px solid var(--slate-200); box-shadow: var(--shadow-sm); text-decoration:none; color:var(--slate-700); margin-top:8px; }
+.cs-left { width:44px; height:44px; border-radius:8px; background:var(--blue-50); display:flex; align-items:center; justify-content:center; color:var(--blue-700); font-size:18px; }
+.cs-right { flex:1; }
+.cs-title { font-weight:700; color:var(--slate-900); }
+.cs-sub { font-size:13px; color:var(--slate-600); }
+.cs-arrow { color:var(--slate-400); font-size:20px; }
+
+.footer-brand > div {
+  margin-top: 2px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--logo-text-color, #2F365F);
+  letter-spacing: -0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  width: max-content;
+  padding-bottom: 2px;
+}
+
+.footer-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1F2B6C;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.footer-logo:hover {
+  color: #1F2B6C;
+}
+
+.footer-logo:hover::after {
+  width: 100%;
+}
+
+.footer-logo img {
+  width: 220px;
+  height: 35px;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.footer-logo:hover img {
+  opacity: 0.8;
+}
+
+.footer-tagline {
+  color: var(--slate-600);
+  line-height: 1.6;
+  max-width: 280px;
+  font-size: 16px;
+}
+
+.footer-col-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--logo-text-color, #2F365F);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+  cursor: default;
+  position: relative;
+  display: inline-block;
+  width: max-content;
+  padding-bottom: 2px;
+  text-align: left;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1F2B6C;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.footer-col-title:hover {
+  color: #1F2B6C;
+}
+
+.footer-col-title:hover::after {
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-link {
+  font-size: 16px;
+  color: var(--slate-600);
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  padding-bottom: 2px;
+  display: inline-block;
+  width: max-content;
+}
+.footer-link1 {
+  font-size: 16px;
+  color: var(--slate-600);
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  padding-bottom: 2px;
+  display: inline-block;
+  width: max-content;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #1F2B6C;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.footer-link1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #1F2B6C;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.footer-link:hover {
+  color: #1F2B6C;
+}
+.footer-link1:hover {
+  color: #1F2B6C;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+.footer-link1:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  padding-top: 16px;
+  border-top: 1px solid var(--slate-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--slate-600);
+}
+
+.footer-copy {
+  color: var(--slate-600);
+  font-size: 14px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-legal a {
+  color: var(--slate-600);
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: color 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  padding-bottom: 2px;
+  font-weight: 500;
+  display: inline-block;
+  width: max-content;
+}
+
+.footer-legal a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #1F2B6C;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.footer-legal a:hover {
+  color: #1F2B6C;
+}
+
+.footer-legal a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .footer-brand {
+    grid-column: span 2;
+  }
+  .footer-col-title {
+    margin-bottom: 8px;
+  }
+  .footer-links {
+    gap: 4px;
+  }
+  .footer-logo img {
+    width: 180px;
+    height: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-brand {
+    grid-column: auto;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .footer-links {
+    gap: 12px;
+  }
+  .footer-bottom {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .footer-legal {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .footer-logo img {
+    width: 150px;
+    height: 25px;
+  }
+}
+</style>

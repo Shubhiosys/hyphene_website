@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms and Conditions - Hyphene — AI-Powered Healthcare Operations</title>
+<meta name="description" content="Read Hyphene's terms and conditions for AI-powered healthcare operations platform. Legal terms for healthcare automation services and solutions." />
+<meta name="keywords" content="Hyphene terms, healthcare AI terms, medical software terms, healthcare automation legal, AI healthcare conditions" />
+<meta name="author" content="Hyphene" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://hyphene.ai/terms" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Terms and Conditions - Hyphene — AI-Powered Healthcare Operations" />
+<meta property="og:description" content="Read Hyphene's terms and conditions for AI-powered healthcare operations platform." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hyphene.ai/terms" />
+<meta property="og:site_name" content="Hyphene" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  /* ═══════════════════════════════════════════
+       DESIGN TOKENS
+  ═══════════════════════════════════════════ */
+  :root {
+    --premium-gradient: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+    --logo-text-color: #2F365F;
+    --blue-500: #3B82F6;
+    --blue-400: #60A5FA;
+    --blue-100: #DBEAFE;
+    --blue-50:  #EFF6FF;
+
+    --slate-950: #020617;
+    --slate-900: #0F172A;
+    --slate-800: #1E293B;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-400: #94A3B8;
+    --slate-300: #CBD5E1;
+    --slate-200: #E2E8F0;
+    --slate-100: #F1F5F9;
+    --slate-50:  #F8FAFC;
+    --white:     #FFFFFF;
+
+    --green-500: #22C55E;
+    --green-100: #DCFCE7;
+    --amber-500: #F59E0B;
+    --amber-100: #FEF3C7;
+    --red-500:   #EF4444;
+    --red-100:   #FEE2E2;
+
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'DM Mono', monospace;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-md: 0 4px 16px rgba(15,23,42,0.08), 0 2px 6px rgba(15,23,42,0.05);
+    --shadow-lg: 0 12px 40px rgba(15,23,42,0.10), 0 4px 16px rgba(15,23,42,0.06);
+    --shadow-blue: 0 8px 32px rgba(37,99,235,0.20);
+
+    --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+    --transition-slow: 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* ═══════════════════════════════════════════
+       RESET & BASE
+  ═══════════════════════════════════════════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--slate-50);
+    color: var(--slate-900);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+  ul { list-style: none; }
+  button { font-family: inherit; cursor: pointer; border: none; }
+
+  /* ═══════════════════════════════════════════
+       LAYOUT UTILITIES
+  ═══════════════════════════════════════════ */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .section { padding: 96px 0; }
+  .section-sm { padding: 64px 0; }
+
+  /* ═══════════════════════════════════════════
+       TYPOGRAPHY
+  ═══════════════════════════════════════════ */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(59,130,246,0.1);
+    border: 1px solid rgba(59,130,246,0.2);
+    color: var(--blue-600);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: 16px;
+  }
+  .eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue-500);
+  }
+  .display-xl {
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--slate-900);
+  }
+  .display-lg {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--slate-900);
+  }
+  .display-md {
+    font-size: clamp(24px, 2.5vw, 32px);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--slate-900);
+  }
+  .body-lg {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--slate-700);
+  }
+  .body-md {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--slate-600);
+  }
+  .body-sm {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--slate-500);
+  }
+  .highlight {
+    background: linear-gradient(135deg, var(--blue-500), var(--blue-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ═══════════════════════════════════════════
+       BUTTONS
+  ═══════════════════════════════════════════ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    transition: all var(--transition);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: #3EA6E8;
+    color: white;
+    border: 1px solid #3EA6E8;
+  }
+  .btn-primary:hover {
+    background: #2D8FD7;
+    border-color: #2D8FD7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(62, 166, 232, 0.3);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--slate-700);
+    border: 1.5px solid var(--slate-200);
+  }
+  .btn-outline:hover {
+    background: var(--slate-50);
+    border-color: var(--slate-300);
+    color: var(--slate-800);
+  }
+
+  /* ═══════════════════════════════════════════
+       TERMS SPECIFIC STYLES
+  ═══════════════════════════════════════════ */
+  .terms-hero {
+    background: var(--premium-gradient);
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+  }
+  .terms-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 48px;
+    margin: -40px auto 0;
+    max-width: 900px;
+    position: relative;
+    z-index: 10;
+  }
+  .terms-section {
+    margin-bottom: 48px;
+  }
+  .terms-section h2 {
+    color: var(--slate-900);
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .terms-section h3 {
+    color: var(--slate-800);
+    margin: 24px 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .terms-section p {
+    margin-bottom: 16px;
+    color: var(--slate-800);
+    line-height: 1.7;
+  }
+  .terms-section ul {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+  .terms-section li {
+    margin-bottom: 8px;
+    color: var(--slate-800);
+    position: relative;
+    list-style-type: none;
+  }
+  .terms-section li::before {
+    content: "•";
+    color: var(--blue-500);
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+  }
+  .last-updated {
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-top: 32px;
+    text-align: center;
+  }
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--blue-500);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition);
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .back-to-top:hover {
+    background: var(--blue-600);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .terms-content {
+      padding: 32px 24px;
+      margin: -20px 16px 0;
+    }
+    .terms-hero {
+      padding: 80px 0 60px;
+    }
+    .display-xl {
+      font-size: clamp(28px, 6vw, 40px);
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<div id="navbar-placeholder"></div>
+
+<script>
+fetch('navbar.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('navbar-placeholder').innerHTML = html;
+  })
+  .catch(error => console.error('Error loading navbar:', error));
+</script>
+
+<!-- ═══════════════════════════════════════════
+     TERMS HERO
+═══════════════════════════════════════════ -->
+<section class="terms-hero" aria-label="Terms and Conditions">
+  <div class="container">
+    <div class="eyebrow">
+      <span class="eyebrow-dot"></span>
+      Legal Information
+    </div>
+    <h1 class="display-xl">
+      Terms and <span class="highlight">Conditions</span>
+    </h1>
+    <p class="body-lg" style="max-width: 600px; margin: 24px auto 0; color: white;">
+      Please read these terms carefully before using Hyphene's AI-powered healthcare operations platform.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TERMS CONTENT
+═══════════════════════════════════════════ -->
+<section class="section" aria-label="Terms Content">
+  <div class="container">
+    <div class="terms-content">
+      
+      <!-- Acceptance of Terms -->
+      <div class="terms-section">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing and using Hyphene's AI-powered healthcare operations platform, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+        <p>These terms constitute a legally binding agreement between you ("User") and Hyphene Inc. ("Company," "we," "us," or "our").</p>
+      </div>
+
+      <!-- Services Description -->
+      <div class="terms-section">
+        <h2>2. Services Description</h2>
+        <p>Hyphene provides AI-powered healthcare operations solutions including:</p>
+        <ul>
+          <li>NurseOps - Workforce Intelligence Platform</li>
+          <li>ClaimPilot - Autonomous Claims Engine</li>
+          <li>AI-driven workflow automation and analytics</li>
+          <li>Real-time operational monitoring</li>
+          <li>Data integration with EHR systems</li>
+        </ul>
+        <p>Our services are designed to streamline healthcare operations, reduce manual work, and improve patient care delivery.</p>
+      </div>
+
+      <!-- User Responsibilities -->
+      <div class="terms-section">
+        <h2>3. User Responsibilities</h2>
+        <p>As a user of Hyphene's platform, you agree to:</p>
+        <ul>
+          <li>Provide accurate and complete information</li>
+          <li>Maintain the security of your account credentials</li>
+          <li>Use the platform in compliance with healthcare regulations</li>
+          <li>Not attempt to reverse engineer or circumvent security measures</li>
+          <li>Report any security vulnerabilities promptly</li>
+        </ul>
+      </div>
+
+      <!-- Data Privacy and Security -->
+      <div class="terms-section">
+        <h2>4. Data Privacy and Security</h2>
+        <p>We are committed to protecting patient data and healthcare information. Our platform:</p>
+        <ul>
+          <li>Is HIPAA compliant and SOC 2 Type II certified</li>
+          <li>Uses end-to-end encryption for all data transmissions</li>
+          <li>Implements role-based access controls</li>
+          <li>Maintains comprehensive audit trails</li>
+          <li>Never sells patient data to third parties</li>
+        </ul>
+        <p>For detailed information about our data practices, please refer to our Privacy Policy.</p>
+      </div>
+
+      <!-- Intellectual Property -->
+      <div class="terms-section">
+        <h2>5. Intellectual Property</h2>
+        <p>All content, features, and functionality of the Hyphene platform are owned by Hyphene Inc. and protected by intellectual property laws.</p>
+        <p>You retain ownership of your data but grant us a license to use it solely for providing and improving our services.</p>
+        <p>You may not copy, modify, distribute, or create derivative works of our proprietary software or content.</p>
+      </div>
+
+      <!-- Limitation of Liability -->
+      <div class="terms-section">
+        <h2>6. Limitation of Liability</h2>
+        <p>Hyphene provides its services "as is" and makes no warranties beyond those expressly stated in these terms.</p>
+        <p>To the maximum extent permitted by law, we shall not be liable for:</p>
+        <ul>
+          <li>Indirect, incidental, or consequential damages</li>
+          <li>Loss of data or business interruption</li>
+          <li>Decisions made based on AI recommendations</li>
+          <li>Third-party service integrations</li>
+        </ul>
+      </div>
+
+      <!-- Service Availability -->
+      <div class="terms-section">
+        <h2>7. Service Availability</h2>
+        <p>We strive to maintain high service availability but cannot guarantee 100% uptime.</p>
+        <p>Service may be temporarily unavailable for maintenance, updates, or technical issues beyond our control.</p>
+        <p>We will provide reasonable notice for scheduled maintenance and work to restore services promptly during unexpected outages.</p>
+      </div>
+
+      <!-- Termination -->
+      <div class="terms-section">
+        <h2>8. Termination</h2>
+        <p>You may terminate your account at any time through your account settings or by contacting our support team.</p>
+        <p>We reserve the right to terminate accounts that violate these terms or engage in prohibited activities.</p>
+        <p>Upon termination, we will delete your data in accordance with our data retention policies and legal requirements.</p>
+      </div>
+
+      <!-- Changes to Terms -->
+      <div class="terms-section">
+        <h2>9. Changes to Terms</h2>
+        <p>We may update these terms periodically to reflect changes in our services or legal requirements.</p>
+        <p>Significant changes will be communicated via email or platform notifications.</p>
+        <p>Continued use of the platform after changes constitutes acceptance of the updated terms.</p>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="terms-section">
+        <h2>10. Contact Information</h2>
+        <p>For questions about these Terms and Conditions, please contact us:</p>
+        <ul>
+          <li>Email: legal@hyphene.ai</li>
+          <li>Phone: 1-800-HYPHENE</li>
+          <li>Address: 123 Healthcare Tech Ave, San Francisco, CA 94105</li>
+        </ul>
+      </div>
+
+      <!-- Last Updated -->
+      <div class="last-updated">
+        <p class="body-sm">
+          <strong>Last Updated:</strong> December 15, 2024<br>
+          <strong>Effective Date:</strong> January 1, 2025
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Back to Top Button -->
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M10 3l7 7-3 3-4 4M10 3l-7 7 3 3 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<div id="footer-placeholder"></div>
+
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+  })
+  .catch(error => console.error('Error loading footer:', error));
+</script>
+
+<script>
+// Back to top functionality
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+backToTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

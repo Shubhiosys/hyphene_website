@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How It Works - Hyphene | AI Healthcare Implementation Process</title>
+<meta name="description" content="Learn how Hyphene's AI platform transforms healthcare operations in days, not months. From data integration to AI model training and automation activation." />
+<meta name="keywords" content="healthcare AI implementation, AI deployment process, healthcare automation setup, EHR integration, AI model training" />
+<meta name="author" content="Hyphene" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://hyphene.ai/how-it-works" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="How It Works - Hyphene | AI Healthcare Implementation Process" />
+<meta property="og:description" content="Learn how Hyphene's AI platform transforms healthcare operations in days, not months. From data integration to AI model training and automation activation." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hyphene.ai/how-it-works" />
+<meta property="og:image" content="https://hyphene.ai/how-it-works-hero.png" />
+<meta property="og:site_name" content="Hyphene" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How It Works - Hyphene | AI Healthcare Implementation Process" />
+<meta name="twitter:description" content="Learn how Hyphene's AI platform transforms healthcare operations in days, not months." />
+<meta name="twitter:image" content="https://hyphene.ai/how-it-works-hero.png" />
+<meta name="twitter:site" content="@hyphene" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How Hyphene AI Platform Works",
+  "description": "Step-by-step process for implementing Hyphene's AI healthcare platform",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Connect Your Data",
+      "text": "Integrate your EHR, payer systems, and scheduling tools via pre-built connectors"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "AI Model Training",
+      "text": "Our AI ingests your historical data and learns your organization's unique patterns"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Automation Activates",
+      "text": "Workflows go live with automatic claims processing and schedule optimization"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Measure Results",
+      "text": "ROI dashboards surface savings from day one with real-time tracking"
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ═══════════════════════════════════════════
+     DESIGN TOKENS
+  ═══════════════════════════════════════════ */
+  :root {
+    --premium-gradient: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+    --logo-text-color: #2F365F;
+    --blue-500: #3B82F6;
+    --blue-400: #60A5FA;
+    --blue-100: #DBEAFE;
+    --blue-50:  #EFF6FF;
+
+    --slate-950: #020617;
+    --slate-900: #0F172A;
+    --slate-800: #1E293B;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-400: #94A3B8;
+    --slate-300: #CBD5E1;
+    --slate-200: #E2E8F0;
+    --slate-100: #F1F5F9;
+    --slate-50:  #F8FAFC;
+    --white:     #FFFFFF;
+
+    --green-500: #22C55E;
+    --green-100: #DCFCE7;
+    --amber-500: #F59E0B;
+    --amber-100: #FEF3C7;
+    --red-500:   #EF4444;
+    --red-100:   #FEE2E2;
+
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'DM Mono', monospace;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-md: 0 4px 16px rgba(15,23,42,0.08), 0 2px 6px rgba(15,23,42,0.05);
+    --shadow-lg: 0 12px 40px rgba(15,23,42,0.10), 0 4px 16px rgba(15,23,42,0.06);
+    --shadow-blue: 0 8px 32px rgba(37,99,235,0.20);
+
+    --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+    --transition-slow: 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* ═══════════════════════════════════════════
+     RESET & BASE
+  ═══════════════════════════════════════════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--slate-50);
+    color: var(--slate-900);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+  ul { list-style: none; }
+  button { font-family: inherit; cursor: pointer; border: none; }
+
+  /* ═══════════════════════════════════════════
+     LAYOUT UTILITIES
+  ═══════════════════════════════════════════ */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .section { padding: 96px 0; }
+  .section-sm { padding: 64px 0; }
+
+  /* ═══════════════════════════════════════════
+     TYPOGRAPHY
+  ═══════════════════════════════════════════ */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    background: var(--premium-gradient);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+  }
+  .eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--white);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .display-xl {
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--logo-text-color);
+  }
+  .display-lg {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--logo-text-color);
+  }
+  .display-md {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--logo-text-color);
+  }
+  .highlight {
+    background:#3EA6E8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+  .body-lg { font-size: 18px; line-height: 1.7; color: var(--slate-600); }
+  .body-md { font-size: 16px; line-height: 1.7; color: var(--slate-600); }
+  .label { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+  .mono { font-family: var(--font-mono); }
+
+  /* ═══════════════════════════════════════════
+     BUTTONS
+  ═══════════════════════════════════════════ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    transition: all var(--transition);
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+    color: var(--white);
+    box-shadow: var(--shadow-blue), inset 0 1px 0 rgba(255,255,255,0.12);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #3B3F7E 0%, #2F365F 25%, #312E81 50%, #1E1B4B 75%, #3B3F7E 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 40px rgba(47,54,95,0.30), inset 0 1px 0 rgba(255,255,255,0.12);
+  }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-outline {
+    background: var(--white);
+    color: var(--slate-700);
+    border: 1.5px solid var(--slate-200);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-outline:hover {
+    border-color: var(--slate-300);
+    background: var(--slate-50);
+    transform: translateY(-1px);
+  }
+  .btn-lg { padding: 15px 30px; font-size: 16px; border-radius: var(--radius-md); }
+  .btn-sm { padding: 8px 16px; font-size: 13px; }
+  .btn-icon { width: 18px; height: 18px; display: inline-block; }
+
+  /* ═══════════════════════════════════════════
+     HERO SECTION
+  ═══════════════════════════════════════════ */
+  #hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #E8F0FD 50%, #DBEAFE 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+  }
+  .hero-bg-glow {
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+    animation: pulse-glow 8s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+  .hero-bg-shape-1 {
+    position: absolute;
+    top: 10%; left: 5%;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(62,166,232,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: float-shape 12s ease-in-out infinite;
+  }
+  .hero-bg-shape-2 {
+    position: absolute;
+    bottom: 10%; right: 10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(47,54,95,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: float-shape 15s ease-in-out infinite reverse;
+  }
+  .hero-bg-shape-3 {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(34,197,94,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: float-shape 18s ease-in-out infinite;
+  }
+  @keyframes float-shape {
+    0%, 100% { transform: translateY(0) scale(1); }
+    33% { transform: translateY(-30px) scale(1.05); }
+    66% { transform: translateY(20px) scale(0.95); }
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ═══════════════════════════════════════════
+     HOW IT WORKS
+  ═══════════════════════════════════════════ */
+  #how { background: var(--slate-50); padding: 50px 0; }
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .steps-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  .step-item {
+    position: relative;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .step-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 24px;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: var(--slate-200);
+  }
+  .step-num-ring {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--premium-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .step-num {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .step-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--logo-text-color);
+    margin-bottom: 12px;
+  }
+  .step-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--slate-600);
+  }
+
+  /* ═══════════════════════════════════════════
+     CTA SECTION
+  ═══════════════════════════════════════════ */
+  .cta-section {
+    background: var(--premium-gradient);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .cta-section p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-white {
+    background: var(--white);
+    color: var(--slate-900);
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(255,255,255,0.4);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-white:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    border-color: white;
+    background: rgba(255,255,255,0.95);
+  }
+
+  /* ═══════════════════════════════════════════
+     MOBILE RESPONSIVE
+  ═══════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .steps-track { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
+    .step-item:not(:last-child)::after { display: none; }
+  }
+  @media (max-width: 768px) {
+    .hero-inner { text-align: center; }
+    .hero-ctas { justify-content: center; }
+    .steps-track { grid-template-columns: 1fr; gap: 32px; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .section { padding: 60px 0; }
+    #hero { padding: 80px 0 60px; }
+  }
+</style>
+</head>
+
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero" aria-label="How It Works Hero">
+    <div class="hero-bg-glow" aria-hidden="true"></div>
+    <div class="container" >
+      <div class="hero-inner">
+        <!-- <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          How It Works
+        </div> -->
+        <h1 class="display-xl">
+          Up and running in <span class="highlight">days, not months</span>
+        </h1>
+        <p class="body-lg">
+          Hyphene's implementation team handles everything. Your team just logs in.
+        </p>
+        <div class="hero-ctas">
+          <a href="#how" class="btn btn-primary btn-lg">
+            See the Process
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-lg">
+            Request Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════ -->
+  <section id="how" class="section" aria-label="How it works">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow"><span class="eyebrow-dot"></span>How It Works</span>
+        <h2 class="display-lg">Up and running in <span class="highlight">days, not months</span></h2>
+        <p class="body-md">Hyphene's implementation team handles everything. Your team just logs in.</p>
+      </div>
+
+      <div class="steps-track">
+        <div class="step-item">
+          <div class="step-num-ring" aria-hidden="true">
+            <div class="step-num">1</div>
+          </div>
+          <h3 class="step-title">Connect Your Data</h3>
+          <p class="step-desc">Integrate your EHR, payer systems, and scheduling tools via pre-built connectors. No custom development needed.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num-ring" aria-hidden="true">
+            <div class="step-num">2</div>
+          </div>
+          <h3 class="step-title">AI Model Training</h3>
+          <p class="step-desc">Our AI ingests your historical data and learns your organization's unique patterns, payer rules, and staffing rhythms.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num-ring" aria-hidden="true">
+            <div class="step-num">3</div>
+          </div>
+          <h3 class="step-title">Automation Activates</h3>
+          <p class="step-desc">Workflows go live. Claims process automatically. Schedules self-optimize. Alerts route intelligently — all in real time.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num-ring" aria-hidden="true">
+            <div class="step-num">4</div>
+          </div>
+          <h3 class="step-title">Measure Results</h3>
+          <p class="step-desc">ROI dashboards surface savings from day one. Your team tracks improvements and shares outcomes with leadership instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="cta-section" aria-label="Call to Action">
+    <div class="container">
+      <h2>Transform Your Healthcare Operations Today</h2>
+      <p>Join 200+ healthcare organizations already using AI to improve efficiency, reduce costs, and deliver better patient care.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary" onclick="window.location.href='contact.html'">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Book a Demo
+        </button>
+        <button class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="10,8 16,12 10,16"/>
+          </svg>
+          See How It Works
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 72;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
