@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Enforce HTTPS redirect in production environments (via x-forwarded-proto header)
+// 1. Enforce HTTPS redirect in production environments (via x-forwarded-proto header)
 app.use((req, res, next) => {
   if (req.headers["x-forwarded-proto"] && req.headers["x-forwarded-proto"] !== "https") {
     return res.redirect(301, `https://${req.headers.host}${req.originalUrl}`);
@@ -15,8 +15,81 @@ app.use((req, res, next) => {
   next();
 });
 
+// 2. Normalize trailing slashes (e.g. /about/ -> /about) to prevent duplicate content
+app.use((req, res, next) => {
+  if (req.path.length > 1 && req.path.endsWith("/")) {
+    const cleanUrl = req.path.slice(0, -1) + req.url.slice(req.path.length);
+    return res.redirect(301, cleanUrl);
+  }
+  next();
+});
+
+// 3. Block access to forbidden directories and backend/dev configuration files
+const forbiddenPaths = [
+  "/temp",
+  "/dev",
+  "/node_modules",
+  "/package.json",
+  "/package-lock.json",
+  "/server.js",
+  "/port.html",
+  "/port"
+];
+
+app.use((req, res, next) => {
+  const cleanPath = req.path.toLowerCase().replace(/\/$/, "");
+  const isForbidden = forbiddenPaths.some(p => cleanPath === p || cleanPath.startsWith(p + "/")) || 
+                      req.path.includes(".env");
+  if (isForbidden) {
+    return res.status(403).sendFile(path.join(__dirname, "403.html"));
+  }
+  next();
+});
+
+// 4. Redirect standard index.html or clean index to root homepage (/) to prevent duplicate indexing
+app.use((req, res, next) => {
+  const cleanPath = req.path.toLowerCase().replace(/\/$/, "");
+  if (req.path === "/index.html" || cleanPath === "/index") {
+    return res.redirect(301, "/");
+  }
+  next();
+});
+
+// 5. Redirect any direct .html requests to their clean URL counterparts
+app.use((req, res, next) => {
+  if (req.path.endsWith(".html")) {
+    const cleanUrl = req.path.slice(0, -5);
+    return res.redirect(301, cleanUrl + req.url.slice(req.path.length));
+  }
+  next();
+});
+
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: false, limit: "10mb" }));
+
+// 6. Explicit Clean URL route mappings
+const validCleanRoutes = {
+  "/": "index.html",
+  "/about": "about.html",
+  "/capabilities": "capabilities.html",
+  "/career": "career.html",
+  "/case-study": "case-study.html",
+  "/claimpilot-landing": "claimpilot-landing.html",
+  "/contact": "contact.html",
+  "/how-it-works": "how-it-works.html",
+  "/nurseops-landing": "nurseops-landing.html",
+  "/privacy": "privacy.html",
+  "/solutions": "solutions.html",
+  "/terms": "terms.html"
+};
+
+Object.entries(validCleanRoutes).forEach(([route, file]) => {
+  app.get(route, (req, res) => {
+    res.sendFile(path.join(__dirname, file));
+  });
+});
+
+// 7. Serve other static assets
 app.use(express.static(__dirname));
 
 const requiredConfig = ["GMAIL_USER", "GMAIL_APP_PASSWORD", "NOTIFICATION_TO"];
@@ -457,8 +530,13 @@ app.post("/api/apply", async (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+// Catch-all route to serve the 404 page with a proper status code
+app.use((req, res) => {
+  const ext = path.extname(req.path);
+  if (ext && ext !== ".html") {
+    return res.status(404).send("Not Found");
+  }
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
 app.listen(port, () => {

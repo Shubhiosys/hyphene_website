@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Denied - 403 - Hyphene</title>
+  <meta name="description" content="Access to this page is restricted. Return to Hyphene to explore our AI-powered healthcare operations platform.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --premium-gradient: linear-gradient(135deg, #2F365F 0%, #1E1B4B 25%, #312E81 50%, #3B3F7E 75%, #2F365F 100%);
+      --logo-text-color: #2F365F;
+      --blue-500: #3B82F6;
+      --blue-600: #2563EB;
+      --blue-50: #EFF6FF;
+      --red-500: #EF4444;
+      --red-100: #FEE2E2;
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-600: #475569;
+      --slate-400: #94A3B8;
+      --slate-100: #F1F5F9;
+      --slate-50: #F8FAFC;
+      --white: #FFFFFF;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.08), 0 4px 16px rgba(15, 23, 42, 0.05);
+      --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.2);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--slate-50);
+      color: var(--slate-900);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #navbar-container {
+      width: 100%;
+      height: 76px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      position: relative;
+    }
+
+    .bg-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .error-card {
+      background: var(--white);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: var(--radius-xl);
+      padding: 60px 40px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .art-container {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .art-ring {
+      position: absolute;
+      border: 2px dashed rgba(239, 68, 68, 0.25);
+      border-radius: 50%;
+      animation: rotateRing 20s linear infinite;
+    }
+
+    .ring-1 { width: 160px; height: 160px; }
+    .ring-2 { width: 120px; height: 120px; animation-direction: reverse; animation-duration: 15s; }
+    
+    .art-core {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #EF4444 0%, #991B1B 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+      z-index: 2;
+      animation: pulseCore 3s ease-in-out infinite;
+    }
+
+    .art-text {
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #B91C1C;
+      background: var(--red-100);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      border: 1px solid rgba(239, 68, 68, 0.15);
+      width: fit-content;
+    }
+
+    .title {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .description {
+      font-size: 16px;
+      color: var(--slate-600);
+      max-width: 480px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--premium-gradient);
+      color: var(--white);
+      box-shadow: var(--shadow-blue);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(30, 27, 75, 0.25);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--slate-600);
+      border: 1.5px solid var(--slate-200);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--slate-400);
+      background: var(--slate-50);
+      transform: translateY(-2px);
+    }
+
+    @keyframes rotateRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseCore {
+      0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(239, 68, 68, 0.25); }
+      50% { transform: scale(1.06); box-shadow: 0 12px 48px rgba(239, 68, 68, 0.45); }
+    }
+
+    @media (max-width: 480px) {
+      .error-card {
+        padding: 40px 24px;
+      }
+      .actions {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Include Navbar -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('/navbar.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(html => {
+        // Adjust relative navbar links to absolute for deep route safety
+        const adjustedHtml = html
+          .replace(/href="logo1.png"/g, 'href="/logo1.png"')
+          .replace(/src="logo1.png"/g, 'src="/logo1.png"')
+          .replace(/href="solutions.html"/g, 'href="/solutions.html"')
+          .replace(/href="nurseops-landing.html"/g, 'href="/nurseops-landing.html"')
+          .replace(/href="claimpilot-landing.html"/g, 'href="/claimpilot-landing.html"')
+          .replace(/href="capabilities.html"/g, 'href="/capabilities.html"')
+          .replace(/href="case-study.html"/g, 'href="/case-study.html"')
+          .replace(/href="about.html"/g, 'href="/about.html"')
+          .replace(/href="contact.html"/g, 'href="/contact.html"');
+        
+        document.getElementById('navbar-container').innerHTML = adjustedHtml;
+        
+        // Execute dynamic scripts in navbar
+        const scripts = document.querySelectorAll('#navbar-container script');
+        scripts.forEach(oldScript => {
+          const newScript = document.createElement('script');
+          if (oldScript.src) {
+            newScript.src = oldScript.src;
+            newScript.async = oldScript.async;
+          } else {
+            newScript.textContent = oldScript.textContent;
+          }
+          document.body.appendChild(newScript);
+        });
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  <!-- Main Content -->
+  <main>
+    <div class="bg-glow"></div>
+    <div class="error-card">
+      <div class="art-container">
+        <div class="art-ring ring-1"></div>
+        <div class="art-ring ring-2"></div>
+        <div class="art-core">
+          <div class="art-text">403</div>
+        </div>
+      </div>
+      <div class="eyebrow">Restricted Area</div>
+      <h1 class="title">Access Forbidden</h1>
+      <p class="description">
+        You do not have permission to view this resource. If you believe this is in error, please contact the administrator.
+      </p>
+      <div class="actions">
+        <a href="/" class="btn btn-primary">Go to Homepage</a>
+        <a href="/contact.html" class="btn btn-outline">Contact Support</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('/footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(html => {
+        // Adjust footer assets to absolute paths
+        const adjustedHtml = html
+          .replace(/src="logo1.png"/g, 'src="/logo1.png"')
+          .replace(/href="nurseops-landing.html"/g, 'href="/nurseops-landing.html"')
+          .replace(/href="claimpilot-landing.html"/g, 'href="/claimpilot-landing.html"')
+          .replace(/href="about.html"/g, 'href="/about.html"')
+          .replace(/href="career.html"/g, 'href="/career.html"')
+          .replace(/href="contact.html"/g, 'href="/contact.html"')
+          .replace(/href="privacy.html"/g, 'href="/privacy.html"')
+          .replace(/href="terms.html"/g, 'href="/terms.html"');
+          
+        document.getElementById('footer-container').innerHTML = adjustedHtml;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+</body>
+</html>
