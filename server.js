@@ -7,6 +7,14 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Enforce HTTPS redirect in production environments (via x-forwarded-proto header)
+app.use((req, res, next) => {
+  if (req.headers["x-forwarded-proto"] && req.headers["x-forwarded-proto"] !== "https") {
+    return res.redirect(301, `https://${req.headers.host}${req.originalUrl}`);
+  }
+  next();
+});
+
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: false, limit: "10mb" }));
 app.use(express.static(__dirname));

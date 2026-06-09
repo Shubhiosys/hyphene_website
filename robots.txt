@@ -3,11 +3,13 @@ User-agent: *
 # Sitemap
 Sitemap: https://hyphene.ai/sitemap.xml
 
-# Block crawling of development/temporary/API files
+# Block crawling of development/temporary/API/template files
 Disallow: /temp/
 Disallow: /dev/
 Disallow: /api/
 Disallow: /port.html
+Disallow: /navbar.html
+Disallow: /footer.html
 Disallow: /*.tmp$
 Disallow: /*.log$
 
