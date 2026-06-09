@@ -17,7 +17,7 @@
 
   <!-- Solutions Page -->
   <url>
-    <loc>https://hyphene.ai/solutions</loc>
+    <loc>https://hyphene.ai/solutions.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -30,7 +30,7 @@
 
   <!-- ClaimPilot Landing Page -->
   <url>
-    <loc>https://hyphene.ai/claimpilot</loc>
+    <loc>https://hyphene.ai/claimpilot-landing.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -43,7 +43,7 @@
 
   <!-- NurseOps Landing Page -->
   <url>
-    <loc>https://hyphene.ai/nurseops</loc>
+    <loc>https://hyphene.ai/nurseops-landing.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -56,7 +56,7 @@
 
   <!-- Capabilities Page -->
   <url>
-    <loc>https://hyphene.ai/capabilities</loc>
+    <loc>https://hyphene.ai/capabilities.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -69,7 +69,7 @@
 
   <!-- How It Works Page -->
   <url>
-    <loc>https://hyphene.ai/how-it-works</loc>
+    <loc>https://hyphene.ai/how-it-works.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -80,9 +80,22 @@
     </image:image>
   </url>
 
+  <!-- Case Study Page -->
+  <url>
+    <loc>https://hyphene.ai/case-study.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/case-study-hero.png</image:loc>
+      <image:title>Case Study – Hyphene AI in Healthcare Operations</image:title>
+      <image:caption>Discover how Hyphene transformed healthcare operations for a leading hospital network, reducing manual work by 45% and cutting costs by 30%.</image:caption>
+    </image:image>
+  </url>
+
   <!-- About Page -->
   <url>
-    <loc>https://hyphene.ai/about</loc>
+    <loc>https://hyphene.ai/about.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -93,9 +106,22 @@
     </image:image>
   </url>
 
+  <!-- Careers Page -->
+  <url>
+    <loc>https://hyphene.ai/career.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://hyphene.ai/hero_career.png</image:loc>
+      <image:title>Careers - Hyphene — Shape the Future of Healthcare Operations with AI</image:title>
+      <image:caption>Join our team to build AI-powered products that automate healthcare workflows, improve clinical efficiency, and enhance patient outcomes.</image:caption>
+    </image:image>
+  </url>
+
   <!-- Contact Page -->
   <url>
-    <loc>https://hyphene.ai/contact</loc>
+    <loc>https://hyphene.ai/contact.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -108,7 +134,7 @@
 
   <!-- Terms and Conditions -->
   <url>
-    <loc>https://hyphene.ai/terms</loc>
+    <loc>https://hyphene.ai/terms.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -116,7 +142,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://hyphene.ai/privacy</loc>
+    <loc>https://hyphene.ai/privacy.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
