@@ -7,8 +7,8 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json({ limit: "25kb" }));
-app.use(express.urlencoded({ extended: false, limit: "25kb" }));
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: false, limit: "10mb" }));
 app.use(express.static(__dirname));
 
 const requiredConfig = ["GMAIL_USER", "GMAIL_APP_PASSWORD", "NOTIFICATION_TO"];
@@ -169,6 +169,70 @@ async function validateSubmission(body) {
   };
 }
 
+async function validateApplication(body) {
+  if (String(body.company_website || "").trim()) {
+    return { error: "Unable to submit this form." };
+  }
+
+  const fullName = String(body.full_name || "").trim();
+  const email = String(body.email || "").trim().toLowerCase();
+  const position = String(body.position || "").trim();
+  const resumeFile = String(body.resume_file || "").trim();
+  const resumeName = String(body.resume_name || "").trim();
+  const message = String(body.message || "").trim();
+
+  if (!fullName || !email || !position || !resumeFile || !resumeName) {
+    return { error: "Full name, email, position, and resume file are required." };
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return { error: "Please provide a valid email address." };
+  }
+
+  if (!/\.(pdf|doc|docx)$/i.test(resumeName)) {
+    return { error: "Only .pdf, .doc, and .docx files are allowed." };
+  }
+
+  if (!/^data:.*base64,/i.test(resumeFile)) {
+    return { error: "Invalid resume file upload." };
+  }
+
+  if (resumeFile.length > 7.5 * 1024 * 1024) {
+    return { error: "Resume file must be smaller than 5MB." };
+  }
+
+  if (
+    fullName.length > 120 ||
+    email.length > 254 ||
+    position.length > 120 ||
+    resumeName.length > 255 ||
+    message.length > 2000
+  ) {
+    return { error: "Please shorten your submission and try again." };
+  }
+
+  if ([fullName, email, position, resumeName, message].some(hasControlCharacters)) {
+    return { error: "Please remove invalid characters and try again." };
+  }
+
+  const domainCanReceiveMail = await hasDeliverableDomain(email);
+
+  if (!domainCanReceiveMail) {
+    return { error: "Please use a valid email address that can receive mail." };
+  }
+
+  return {
+    submission: {
+      fullName,
+      email,
+      position,
+      resumeFile,
+      resumeName,
+      message
+    }
+  };
+}
+
 app.post("/api/contact", async (req, res) => {
   const { error, submission } = await validateSubmission(req.body);
 
@@ -272,6 +336,116 @@ app.post("/api/contact", async (req, res) => {
   } catch (mailError) {
     console.error("Contact notification failed:", mailError);
     return res.status(500).json({ message: "Unable to send notification email." });
+  }
+});
+
+app.post("/api/apply", async (req, res) => {
+  const { error, submission } = await validateApplication(req.body);
+
+  if (error) {
+    return res.status(400).json({ message: error });
+  }
+
+  if (!hasMailConfig()) {
+    return res.status(500).json({ message: "Notification email is not configured." });
+  }
+
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_APP_PASSWORD
+    }
+  });
+
+  const attachmentBuffer = Buffer.from(submission.resumeFile.split("base64,")[1] || submission.resumeFile, "base64");
+
+  const subject = `New Hyphene Job Application: ${submission.position} from ${submission.fullName}`;
+  const text = [
+    "New Job Application received",
+    "",
+    `Position: ${submission.position}`,
+    `Full Name: ${submission.fullName}`,
+    `Email: ${submission.email}`,
+    `Resume File: Attached (${submission.resumeName})`,
+    "",
+    "Cover Note / Message:",
+    submission.message || "None provided"
+  ].join("\n");
+
+  const html = `
+    <div style="font-family:Arial,sans-serif;color:#0f172a;line-height:1.5;">
+      <h2 style="margin:0 0 12px;">New Hyphene Job Application</h2>
+      <table style="border-collapse:collapse;width:100%;max-width:680px;">
+        ${field("Position", submission.position)}
+        ${field("Full Name", submission.fullName)}
+        ${field("Email", submission.email)}
+        ${field("Resume File", `Attached (${submission.resumeName})`)}
+        ${field("Cover Note", submission.message)}
+      </table>
+    </div>
+  `;
+
+  const confirmationSubject = `We received your application for ${submission.position} - Hyphene`;
+  const confirmationText = [
+    `Hi ${submission.fullName},`,
+    "",
+    `Thank you for applying for the ${submission.position} position at Hyphene. We have received your application and our team will review it shortly.`,
+    "",
+    "Your submitted details:",
+    `Position: ${submission.position}`,
+    `Resume File: ${submission.resumeName}`,
+    "",
+    "Regards,",
+    "Hyphene Recruitment Team"
+  ].join("\n");
+
+  const confirmationHtml = `
+    <div style="font-family:Arial,sans-serif;color:#0f172a;line-height:1.6;">
+      <h2 style="margin:0 0 12px;">Thank you for applying to Hyphene</h2>
+      <p>Hi ${escapeHtml(submission.fullName)},</p>
+      <p>Thank you for applying for the <strong>${escapeHtml(submission.position)}</strong> position. We have received your application and our recruitment team will review it shortly.</p>
+      <h3 style="margin:20px 0 8px;">Your submitted details</h3>
+      <table style="border-collapse:collapse;width:100%;max-width:680px;">
+        ${field("Position", submission.position)}
+        ${field("Resume File", submission.resumeName)}
+      </table>
+      <p style="margin-top:20px;">Regards,<br>Hyphene Recruitment Team</p>
+    </div>
+  `;
+
+  try {
+    await Promise.all([
+      transporter.sendMail({
+        from: `"Hyphene Careers" <${process.env.GMAIL_USER}>`,
+        to: process.env.NOTIFICATION_TO,
+        replyTo: submission.email,
+        subject,
+        text,
+        html,
+        attachments: [
+          {
+            filename: submission.resumeName,
+            content: attachmentBuffer
+          }
+        ]
+      }),
+      transporter.sendMail({
+        from: `"Hyphene Careers" <${process.env.GMAIL_USER}>`,
+        to: submission.email,
+        replyTo: process.env.NOTIFICATION_TO,
+        subject: confirmationSubject,
+        text: confirmationText,
+        html: confirmationHtml
+      })
+    ]);
+
+    return res.status(200).json({ message: "Application submitted successfully." });
+  } catch (mailError) {
+    console.error("Application notification failed:", mailError);
+    return res.status(500).json({ message: "Unable to send application email." });
   }
 });
 
