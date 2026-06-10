@@ -373,7 +373,7 @@
 
     .cc-trigger:hover {
       color: var(--cc-text-main);
-      transform: translateY(-2px) rotate(15deg);
+      transform: translateY(-2px);
       border-color: rgba(62, 166, 232, 0.4);
       box-shadow: 0 8px 24px rgba(62, 166, 232, 0.2);
     }
@@ -382,6 +382,11 @@
       width: 20px;
       height: 20px;
       fill: currentColor;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cc-trigger:hover svg {
+      transform: rotate(15deg);
     }
 
     /* Tooltip */
