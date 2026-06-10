@@ -55,9 +55,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// 5. Redirect any direct .html requests to their clean URL counterparts
+// 5. Redirect any direct .html requests to their clean URL counterparts (excluding navbar.html and footer.html)
 app.use((req, res, next) => {
-  if (req.path.endsWith(".html")) {
+  if (req.path.endsWith(".html") && !["/navbar.html", "/footer.html"].includes(req.path)) {
     const cleanUrl = req.path.slice(0, -5);
     return res.redirect(301, cleanUrl + req.url.slice(req.path.length));
   }
